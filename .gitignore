@@ -1,0 +1,10 @@
+# CoDeSys 临时文件
+*.opt
+*.bootinfo
+*.bootinfo_guids
+*.compileinfo
+*.simulation.bootinfo
+*.simulation.bootinfo_guids
+*.simulation.compileinfo
+*.~u
+*.precompilecache
