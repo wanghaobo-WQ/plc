@@ -1,0 +1,811 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 
+1
+1
+Working with Single-dimensional Arrays in Java
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+Working with Arrays in Java
+When you start writing programs, you will come across situations where you may want a single variable to hold multiple values at the same time.
+Variable Types
+: byte, short, int, long, char, float &amp; double.
+ 
+All these types of variables can hold only ONE value at a time.
+You can use ‘Arrays’ to store more than one 
+value
+ 
+of
+ 
+the
+ 
+same
+ 
+type.
+ 
+Like
+ 
+the
+ 
+primitive
+ 
+variables,
+ 
+Arrays
+ 
+are
+ 
+declared
+ 
+and
+ 
+initialized
+ 
+with
+ 
+values. 
+=== ppt/slides/slide3.xml ===
+ARRAYS
+An
+ 
+Array
+ 
+is
+ 
+a
+ 
+data
+ 
+structure
+ 
+that
+ 
+can
+ 
+hold
+ 
+multiple
+ 
+values
+ 
+of
+ 
+the
+ 
+same
+ 
+type
+ 
+and
+ 
+is
+ 
+organized
+ 
+in the form of Rows &amp; Columns.
+=== ppt/slides/slide4.xml ===
+ARRAYS
+Instead of calling
+ 
+them
+ 
+‘Array 1’ and ‘Array 2’,
+ 
+let
+ 
+us
+ 
+give them
+ 
+a name, just
+ 
+like we gave names to our primitive variables. Let’s call them.
+ 
+Array
+ 
+1:
+ 
+Student_Id_List
+Array
+ 
+2:
+ 
+Day_of_Week
+But here’s the thing about Arrays – 
+the positions always start with zero ( 0 ).
+ So, Student id 21 is in the 0
+th
+ position, Student id 33 is in the 1
+st
+ position, and Student id 55 is in the 2
+nd
+ position.
+=== ppt/slides/slide5.xml ===
+ARRAYS
+Example:
+ 
+Refer
+ 
+to
+ 
+an
+ 
+array
+ 
+element
+ 
+using
+ 
+its
+ 
+index
+ position
+Student_Id_List
+ 
+[2]
+ 
+= 
+55;
+=== ppt/slides/slide6.xml ===
+ARRAYS
+Student_Id_List
+ 
+[5]
+Student_Id_List
+ 
+[7]
+ 
+Day_of_Week
+ 
+[2]
+Day_of_Week
+ 
+[5]
+=== ppt/slides/slide7.xml ===
+ARRAYS
+There are multiple ways to declare an Array variable. But first, you need to know one thing about arrays – The length of an Array cannot be changed once it is declared.
+This means
+ 
+that if I declare an Array of size 5 (so that it can hold five different values), then the size of that array variable will always remain 5, and you cannot change it.
+Important
+=== ppt/slides/slide8.xml ===
+ARRAYS Syntax
+Let
+ 
+us
+ 
+look
+ 
+at the
+ 
+Syntax 
+to
+Declare
+ 
+an
+ 
+Array
+ 
+variable
+Declare
+ 
+and Initialize
+ 
+an Array
+ 
+variable
+Syntax 1:
+ 
+Declaration
+ 
+of an
+ 
+Array
+ 
+variable
+ 
+in two 
+steps
+&lt;data
+ 
+type&gt;
+ 
+[
+ 
+]
+  
+&lt;variable 
+name&gt;;
+&lt;variable
+ 
+name&gt;=
+ 
+new
+ 
+&lt;data
+ 
+type&gt;[Size
+ 
+of
+ 
+the
+ 
+array]
+Example:
+ 
+Declaration of
+ 
+an Array
+ 
+variable
+ 
+in two 
+steps
+int
+[]
+ 
+num1
+;
+num1
+ 
+= 
+new
+ int
+[3];
+ 
+String[]
+ 
+str1
+;
+str1
+ 
+= 
+new
+ 
+String[5];
+=== ppt/slides/slide9.xml ===
+ARRAYS Syntax
+You will learn more about ‘objects’ when we learn ‘Object Oriented Programming’ later; for now, understand this:
+-
+	
+Creating
+ 
+an
+ 
+object
+ 
+means
+ 
+allocating
+ 
+a
+ 
+specific
+ 
+amount
+ 
+of
+ 
+memory
+ 
+in
+ 
+RAM
+ 
+for
+ 
+a 
+variable.
+We
+ 
+created
+ 
+an
+ 
+‘int’
+ 
+array
+ 
+object
+ 
+of
+ 
+size
+ 
+3
+ 
+and
+ 
+a
+ 
+‘string’
+ 
+array
+ 
+object
+ 
+of
+ 
+size
+ 
+5
+ 
+and
+ 
+assigned
+ 
+them to their
+ 
+respective
+ 
+variables. Notice
+ 
+the
+ 
+keyword ‘
+new
+’
+ 
+in this example and the
+ 
+word ‘
+object
+’ 
+here.
+=== ppt/slides/slide10.xml ===
+ARRAYS in memory
+int
+[]
+ 
+num1
+;
+num1
+ 
+= 
+new
+ int
+[3];
+ 
+String[]
+ 
+str1
+;
+str1
+ 
+= 
+new
+ 
+String[5];
+=== ppt/slides/slide11.xml ===
+ARRAYS Syntax
+Syntax 2:
+ 
+Declaration of
+ 
+an Array
+ 
+variable
+ 
+in a single
+ 
+step
+&lt;data
+ 
+type&gt;
+ 
+[ ]
+  
+&lt;variable
+ 
+name&gt;=
+ 
+new
+ 
+&lt;data type&gt;[Size
+ 
+of the
+ array];
+Example:
+ 
+Declaration of an Array
+ 
+variable in a single
+ 
+step
+int
+[] 
+num3 
+= 
+new int
+[3]; 
+String[]
+ 
+str2
+ 
+=
+ 
+new
+ 
+String[5];
+=== ppt/slides/slide12.xml ===
+ARRAYS Syntax
+Syntax 3:
+ 
+Declaration and Initialization of an Array variable
+&lt;data type&gt; [ ]  &lt;variable name&gt;= { comma separated values }
+Example:
+ 
+Declaration and Initialization of an
+ 
+Array
+ 
+variable
+int
+[]
+ 
+num2
+ 
+=
+ 
+{1,2,3,4,5,6,7};
+String[]
+ 
+str3
+ 
+=
+ 
+{
+"Monday"
+,
+ 
+"Tuesday"
+,
+ 
+"Wednesday"
+};
+=== ppt/slides/slide13.xml ===
+ARRAYS Syntax 3 in memory
+int
+[]
+ 
+num2
+ 
+=
+ 
+{1,2,3,4,5,6,7};
+String[]
+ 
+str3
+ 
+=
+ 
+{
+"Monday"
+,
+ 
+"Tuesday"
+,
+ 
+"Wednesday"
+};
+=== ppt/slides/slide14.xml ===
+Example
+package
+ 
+workingWithArrays
+;
+public
+ 
+class
+ 
+ArrayVariableTest
+  {
+public
+ 
+static
+ 
+void
+ main(String[] 
+args
+) {
+// Array declaration
+int
+[] 
+num1
+ = 
+new
+ 
+int
+[5]; 
+String[] 
+str1
+ = 
+new
+ String[7];
+// Array initialization
+num1
+[0] = 10;
+num1
+[1] = 20;
+num1
+[2] = 30;
+num1
+[3] = 40;
+num1
+[4] = 50;
+for
+ (
+int
+ 
+i
+ = 0; 
+i
+&lt;=4; 
+i
+++)
+	
+System.
+out
+.println
+(
+"Value of num1["
+ + 
+i
+ + 
+"] = "
+ + 
+num1
+[
+i
+]); 
+System.
+out
+.println
+(
+"\n"
+);
+// Array initialization 
+str1
+[0] = 
+"Sunday"
+; 
+str1
+[1] = 
+"Monday"
+; 
+str1
+[2] = 
+"Tuesday"
+; 
+str1
+[3] = 
+"Wednesday"
+; 
+str1
+[4] = 
+"Thursday"
+; 
+str1
+[5] = 
+"Friday"
+; 
+str1
+[6] = 
+"Saturday"
+;
+for
+ (
+int
+ 
+i
+ = 0; 
+i
+&lt;=6; 
+i
+++)
+	
+System.
+out
+.println
+(
+"Value of str1["
+ + 
+i
+ + 
+"] = "
+ + 
+str1
+[
+i
+]); 
+System.
+out
+.println
+(
+"\n"
+);
+// Array declaration and initialization in the same step
+int
+[] 
+num2
+ = {1,2,3,4,5,6,7};
+String[] 
+str2
+ = {
+"January"
+, 
+"February"
+, 
+"March"
+};
+for
+ (
+int
+ 
+i
+ = 0; 
+i
+&lt;=6; 
+i
+++)
+	
+System.
+out
+.println
+(
+"Value of num2["
+ + 
+i
+ + 
+"] = "
+ + 
+num2
+[
+i
+]); 
+System.
+out
+.println
+(
+"\n"
+);
+for
+ (
+int
+ 
+i
+ = 0; 
+i
+&lt;=2; 
+i
+++)
+	
+System.
+out
+.println
+(
+"Value of str2["
+ + 
+i
+ + 
+"] = "
+ + 
+str2
+[
+i
+]);
+}
+}
+=== ppt/slides/slide15.xml ===
+Arrays notes
+We
+ 
+used
+ 
+two
+ 
+different
+ 
+ways
+ 
+to
+ 
+initialize
+ 
+the
+ 
+array
+ 
+variables
+ 
+–
+ 
+single-line
+ 
+statements
+ 
+and
+ 
+multi- line statements.
+ 
+Look
+ 
+at
+ 
+the
+ 
+shortcut
+ 
+notation
+ 
+we
+ 
+used
+ 
+in
+ 
+this
+ 
+program
+ 
+to
+ 
+increment
+ 
+the
+ 
+value
+ 
+of
+ 
+loop
+ 
+variable
+ 
+‘I’
+by
+ 
+1
+ 
+for
+ 
+each
+ 
+iteration:
+ 
+i
+++.
+ 
+Pay attention that we did NOT use curly braces in the ‘for’ loop because we only wanted to repeat
+ 
+one
+ 
+statement
+ 
+in
+ 
+that
+ 
+loop,
+ 
+the
+ 
+‘
+System.out.println
+’
+ 
+statement.
+ 
+We
+ 
+only
+ 
+need
+ 
+curly
+ 
+braces when we want to include more than one statement in a loop or in the ‘if…else’ statement.

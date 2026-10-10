@@ -1,0 +1,521 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 
+23
+Java Packages and Import Concept
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+Java Packages and Import Concept
+So
+ 
+far,
+ 
+we
+ 
+have
+ 
+seen
+ 
+many
+ 
+code
+ 
+snippets
+ 
+in
+ 
+our
+ 
+examples,
+ 
+and
+ 
+almost
+ 
+all
+ 
+of
+ 
+those
+ 
+snippets
+ 
+had examples of classes. We also learned that a typical Java project has multiple classes in it. So, when
+ 
+we
+ 
+talk
+ 
+about
+ 
+projects
+ 
+with
+ 
+many
+ 
+classes,
+ 
+it
+ 
+is
+ 
+also
+ 
+required
+ 
+that
+ 
+you
+ 
+understand
+ 
+two 
+important
+ 
+concepts
+ 
+–
+ 
+ 
+Java
+ package
+Importing
+ 
+packages
+ 
+&amp;
+ 
+classes
+In
+ 
+the
+ 
+sections
+ 
+below,
+ 
+we will learn
+ 
+about
+ 
+both
+ 
+of these
+ 
+concepts.
+=== ppt/slides/slide3.xml ===
+JAVA PACKAGE
+A Java package is like a folder. When you develop an application involving multiple classes, you need a way to organize those class files. Java provides the ‘package’ mechanism for you to do that. Using a package, you can 
+logically group your class files 
+to make your program more readable and relatively easy to maintain.
+A package also 
+provides access level protection 
+to your classes and attributes. As we learned in the ‘Access specifier’ section, the package-private access specifier limits the access of classes and attributes to the classes in the same package.
+ 
+The package mechanism provides one more feature. A package also provides 
+individual namespace to classes
+. This means you can have classes with the same name in different packages, and they will not conflict with each other.
+=== ppt/slides/slide4.xml ===
+JAVA PACKAGE
+=== ppt/slides/slide5.xml ===
+IMPORTING PACKAGES &amp; CLASSES
+In
+ 
+the
+ 
+earlier
+ 
+section,
+ 
+we
+ 
+learned
+ 
+that
+ 
+we
+ 
+can
+ 
+organize
+ 
+our
+ 
+classes
+ 
+in
+ 
+packages.
+ 
+But
+ 
+the
+ 
+question is, how do we use our classes once we organize them under different packages? So, for example, if you have a public class ‘
+ClassA
+’ in package1 and this class has public members (attributes and methods), then how can you use this class and its members in another class in 
+package2?
+=== ppt/slides/slide6.xml ===
+IMPORTING PACKAGES &amp; CLASSES
+There
+ 
+are
+ 
+two ways
+ 
+to
+ 
+do
+ 
+this:
+1. 
+Use
+ 
+the
+ 
+fully
+ 
+qualified
+ 
+name
+ 
+of
+ 
+that
+ 
+member
+ 
+every
+ 
+time
+ 
+you
+ 
+want
+ 
+to
+ 
+use
+ 
+it
+ 
+in
+ 
+your
+ 
+code
+2. 
+Use
+ 
+the
+ 
+‘import’
+ 
+statement
+ 
+to
+ 
+import
+ 
+the
+ 
+class
+ 
+and
+ 
+members
+ 
+into
+ 
+=== ppt/slides/slide7.xml ===
+Using a Fully Qualified Name
+=== ppt/slides/slide8.xml ===
+Using a Fully Qualified Name
+ClassB
+ code
+ClassA
+ code
+package
+ 
+package1;
+ 
+public
+ 
+class
+ 
+ClassA
+ 
+{ 
+public int 
+var1
+; 
+public int 
+var2
+;
+ 
+//
+ 
+Class
+ 
+A
+ Constructor.
+public
+ 
+ClassA
+()
+ {
+var1
+ 
+=
+ 
+0;
+var2
+ 
+=
+ 
+0;
+}
+public
+ 
+void
+ 
+setValue
+()
+ 
+{ 
+var1 
+= 10;
+var2
+ 
+=
+ 
+20;
+}
+public void 
+printVariables
+() { 
+System.
+out
+.println
+(
+"var1
+ 
+value
+ 
+=
+ 
+"
+ 
++
+ 
+var1
+); 
+System.
+out
+.println
+(
+"var2
+ 
+value
+ 
+=
+ 
+"
+ 
++
+ 
+var2
+);
+ 
+}
+}
+package
+ 
+package
+2
+;
+ 
+public
+ 
+class
+ 
+Class
+B
+ 
+{ 
+	public
+ 
+package1.ClassA
+ 
+ca
+;
+	
+ClassB
+()
+ 
+{
+		ca
+ 
+=
+ 
+new
+ 
+package1.ClassA();
+ca
+.setValue
+(); 
+ca
+.printVariables
+();
+}
+}
+=== ppt/slides/slide9.xml ===
+Using ‘Import’ Statement
+ClassB
+ code
+ClassA
+ code
+package
+ 
+package1;
+ 
+public
+ 
+class
+ 
+ClassA
+ 
+{ 
+public int 
+var1
+; 
+public int 
+var2
+;
+ 
+//
+ 
+Class
+ 
+A
+ Constructor.
+public
+ 
+ClassA
+()
+ {
+var1
+ 
+=
+ 
+0;
+var2
+ 
+=
+ 
+0;
+}
+public
+ 
+void
+ 
+setValue
+()
+ 
+{ 
+var1 
+= 10;
+var2
+ 
+=
+ 
+20;
+}
+public void 
+printVariables
+() { 
+System.
+out
+.println
+(
+"var1
+ 
+value
+ 
+=
+ 
+"
+ 
++
+ 
+var1
+); 
+System.
+out
+.println
+(
+"var2
+ 
+value
+ 
+=
+ 
+"
+ 
++
+ 
+var2
+);
+ 
+}
+}
+package
+ 
+package
+2
+;
+ 
+   
+import
+ 
+package1.ClassA;
+public
+ 
+class
+ 
+Class
+B
+ 
+{ 
+	public
+ 
+ClassA
+ 
+ca
+;
+	
+ClassB
+()
+ 
+{
+		ca
+ 
+=
+ 
+new
+ 
+ClassA
+();
+ca
+.setValue
+(); 
+ca
+.printVariables
+();
+}
+}

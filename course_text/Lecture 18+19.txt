@@ -1,0 +1,1800 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 
+1
+8+19
+OBJECT ORIENTED PROGRAMMING
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology &quot;STANKIN&quot;
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+OOP  Object-Oriented Programming
+Java is an object-oriented programming language. But what is object-oriented programming?
+Object-oriented programming is a technique
+ 
+where every item that is part of your program is considered an 
+object
+. Here, ‘every item’ means anything living or non-living for which you write a program
+write
+ 
+a
+ 
+program
+ 
+for
+ 
+a
+ 
+‘Train Reservation
+ 
+System.’
+ 
+write
+ 
+a
+ 
+program
+ 
+to
+ 
+help
+ 
+track
+ 
+library
+ 
+books
+ 
+borrowed
+ 
+and returned
+Train, Passengers, and Tickets
+Library, Books, and Members
+All these are considered 
+objects
+=== ppt/slides/slide3.xml ===
+OOP  Object-Oriented Programming
+Now,
+ 
+let
+ 
+us
+ 
+think
+ 
+a
+ 
+little
+ 
+bit
+ 
+more
+ 
+about
+ 
+an
+ 
+object.
+ 
+Take
+ 
+an
+ 
+object
+ 
+from
+ 
+the
+ 
+real
+ 
+world
+ 
+and
+ 
+think about what that object 
+has 
+and what that object 
+does
+.
+To
+ 
+answer
+ 
+this
+ 
+question,
+ 
+we
+ 
+will take
+ 
+an
+ 
+example of
+ 
+a
+ ball.
+ 
+ 
+A
+ 
+ball
+ 
+has: Color,
+ 
+Shape,
+ 
+and 
+Size
+A
+ 
+ball
+ 
+does: Bounce,
+ 
+Roll,
+ 
+and Stay
+ 
+at 
+rest
+ 
+‘features’
+ 
+are
+ 
+called –
+ 
+Properties
+ 
+or Attributes
+‘actions’ are called – 
+Behaviors
+=== ppt/slides/slide4.xml ===
+Examples of objects, attributes, and their behaviors
+Objects
+Attribute
+Behavior
+Car
+Color,
+ 
+Make,
+ 
+Model,
+ 
+Number
+ 
+of
+doors,
+ 
+Number
+ 
+of
+ 
+seats
+Starts,
+ 
+Stops,
+ Moves
+Student
+Name,
+ 
+Age,
+ 
+Gender,
+ 
+Student
+ 
+id
+Walks,
+ 
+Runs,
+ 
+Eats,
+ 
+Sleeps,
+Talks
+Bike
+Color,
+ 
+Make,
+ Model
+Starts,
+ 
+Stops,
+ Moves
+Notice
+ 
+that
+ 
+‘Car’
+ 
+and
+ 
+‘Bike’
+ 
+have
+ 
+almost
+ 
+the
+ 
+same
+ 
+attributes
+ 
+and
+ 
+behaviors,
+ 
+and
+ 
+that
+ 
+is
+ 
+because they
+ 
+both
+ 
+are
+ 
+vehicles,
+ 
+which
+ 
+is
+ 
+like
+ 
+a
+ 
+parent
+ 
+type
+ 
+for
+ 
+the
+ 
+‘Car’
+ 
+and
+ 
+‘Bike.’
+ 
+Just
+ 
+remember
+ 
+this for now, as we will learn more about this when we learn about the parent-child relationship between objects.
+!
+=== ppt/slides/slide5.xml ===
+‘OBJECT ORIENTED PROGRAMMING’ USING JAVA
+Now that we understand what an object is and that every object has properties/attributes and behaviors, the next question is – How is Object-oriented programming implemented in Java?
+ 
+Let us recall what we learned about ‘Arrays’ - an Array is a 
+data structure 
+that can hold multiple values of the 
+same type
+.
+To implement object-oriented programming, Java provides another type of data structure called – ‘
+Class
+’. A ‘Class’ is another type of data structure that allows you to store 
+multiple values of different types
+. It also allows you to create a logical group of related data items. From a ‘Class’, you can create multiple instances of that type, known as ‘Objects’. You will learn about ‘Classes’ and ‘Objects’ in upcoming sections. For now, it is important that you familiarize yourself with the concept.
+=== ppt/slides/slide6.xml ===
+Java Classes and Objects
+А 
+‘Class’
+ 
+in
+ 
+Java
+ 
+is
+ 
+a
+ 
+data
+ 
+structure
+ 
+that
+ 
+lets
+ 
+you
+ 
+store
+ 
+values
+ 
+of
+ 
+different
+ 
+types
+ 
+and logically
+ 
+group
+ 
+them.
+ 
+For
+ 
+example,
+ 
+if
+ 
+you
+ 
+want
+ 
+to
+ 
+store
+ 
+data
+ 
+about
+ 
+a
+ 
+student,
+ 
+then
+ 
+you
+need
+ 
+a
+ 
+data structure
+ 
+that
+ 
+can, at
+ 
+the
+ 
+minimum,
+ 
+store
+ 
+below
+ 
+items:
+Student
+ 
+ID
+ 
+–
+ 
+int
+ 
+type
+Student
+ 
+Name
+ 
+–
+ 
+String 
+type
+Student Age
+ 
+– int 
+type
+Student
+ 
+Grade
+ 
+–
+ 
+int 
+type
+Student
+ 
+Address
+ 
+–
+ 
+String
+ 
+type
+Notice
+ 
+that
+ 
+there
+ 
+are
+ 
+5
+ 
+data
+ 
+items
+ 
+about
+ 
+students,
+ 
+and
+ 
+they
+ 
+are
+ 
+of
+ 
+different
+ 
+data
+ 
+types
+ 
+-
+ 
+‘int’
+ 
+and ‘String.’
+ 
+All
+ 
+these
+ 
+data
+ 
+items
+ 
+are
+ 
+logically
+ 
+attached
+ 
+to
+ 
+the
+ 
+student.
+ 
+We
+ 
+need
+ 
+a
+ 
+data
+ 
+structure
+ 
+to hold all these items under a single logical structure.
+=== ppt/slides/slide7.xml ===
+Java class to capture Student details
+public class 
+Student { 
+int 
+studentId
+; 
+String
+ 
+studentName
+; 
+int 
+studentAge
+;
+int 
+studentGrade
+; 
+String
+ 
+studentAddress
+;
+}
+access
+ 
+specifier
+Keyword to create class
+Name of the created class is “Student”
+Our class have 5 
+attributes/properties
+ 
+=== ppt/slides/slide8.xml ===
+Java class to capture Bike details
+public class 
+Bike { 
+String 
+bikeMake
+; 
+String 
+bikeModel
+; 
+int
+ 
+manufactureyear
+; 
+String 
+bikeColor
+;
+}
+access
+ 
+specifier
+Keyword to create class
+Name of the created class is “Bike”
+Our class have 4 
+attributes/properties
+ 
+=== ppt/slides/slide9.xml ===
+The syntax of declaring a ‘class’ 
+Syntax:
+ 
+Declare
+ 
+a
+ 
+Class
+&lt;access
+ 
+specifier&gt;
+ 
+class &lt;name
+ 
+of
+ 
+the
+ 
+class&gt;
+ 
+{
+&lt;Class
+ 
+attributes/properties&gt;
+}
+=== ppt/slides/slide10.xml ===
+A ‘CLASS’ IS LIKE A COOKIE MOLD
+In
+ 
+the
+ 
+earlier
+ 
+section,
+ 
+we
+ 
+learned
+ 
+about
+ 
+‘Class’.
+ 
+We
+ 
+learned
+ 
+that
+ 
+to
+ 
+store
+ 
+data
+ 
+of
+ 
+different
+ 
+types in
+ 
+a
+ 
+logical
+ 
+group,
+ 
+we
+ 
+need
+ 
+to
+ 
+create
+ 
+a
+ 
+class.
+ 
+However,
+ 
+a Class
+ 
+cannot
+ 
+store any
+ 
+data
+ 
+by
+ 
+itself. In Java, a Class is like a blueprint of a building. It is like a design on paper but not an actual 
+building.
+ 
+You
+ 
+should
+ 
+think
+ 
+of
+ 
+a
+ 
+‘Class’
+ 
+as
+ 
+a
+ 
+cookie
+ 
+mold.
+ 
+You
+ 
+do
+ 
+not
+ 
+eat
+ 
+cookie
+ 
+mold;
+ 
+you
+ 
+use
+ 
+it
+ 
+to
+ 
+make cookies of certain sizes and shapes. Similarly, using a Java class, we can create multiple instances of that class, known as ‘Objects.’
+ 
+The ‘Objects’ are later used to store values. Like the primitive variables (int, char…etc.), the ‘Objects’ occupy memory in RAM, but a ‘Class’ does not. We will learn more about ‘Objects’ in upcoming sections.
+=== ppt/slides/slide11.xml ===
+JAVA OBJECTS
+In Java, an object is an 
+instance of a class
+. As mentioned earlier, a ‘Class’ does not occupy any memory in RAM. So, let’s say you write a program with some primitive variables and a class.
+ 
+The
+ 
+primitive
+ 
+variables
+ 
+will
+ 
+occupy
+ 
+memory in
+ 
+RAM,
+ 
+but
+ 
+the
+ 
+class will
+ 
+not
+ 
+occupy
+ 
+any memory.
+ 
+But,
+ 
+when
+ 
+you
+ 
+create
+ 
+an
+ 
+instance
+ 
+of
+ 
+that
+ 
+class
+ 
+(also
+ 
+known
+ 
+as
+ 
+an
+ 
+object
+ 
+of
+ 
+that
+ 
+class), that
+ 
+instance/object
+ 
+will
+ 
+occupy
+ 
+memory
+ 
+because
+ 
+‘Object’
+ 
+stores
+ 
+values
+ 
+in
+ 
+it;
+ 
+‘Class’
+ 
+does
+ 
+not.
+ 
+One thing to note here – I have been using the terms ‘instance’ and ‘object’ interchangeably here,
+ 
+and
+ 
+that
+ 
+is
+ 
+because they
+ 
+both
+ 
+mean
+ 
+the
+ 
+same. If I
+ 
+ask
+ 
+you
+ 
+to
+ 
+create
+ 
+an instance
+ 
+of
+ 
+a
+ 
+class or an object of a class, they both mean the same.
+Since
+ 
+we
+ 
+are
+ 
+on
+ 
+the
+ 
+topic
+ 
+and
+ 
+discussing
+ 
+the
+ 
+difference
+ 
+between
+ 
+‘Class’
+ 
+and
+ 
+‘Object,’
+ 
+let
+ 
+us 
+also
+ 
+learn
+ 
+‘
+How
+ 
+to
+ 
+create objects
+ 
+from
+ 
+a
+ 
+class.
+ 
+‘
+=== ppt/slides/slide12.xml ===
+JAVA OBJECTS
+=== ppt/slides/slide13.xml ===
+USE ‘NEW’ ‘KEYWORD TO CREATE OBJECTS FROM A CLASS
+Java
+ 
+provides
+ 
+a
+ 
+keyword,
+ 
+‘
+new
+’,
+ 
+to
+ 
+create
+ 
+an
+ 
+object
+ 
+from
+ 
+a
+ 
+class.
+ 
+The
+ 
+‘
+new
+’
+ 
+keyword
+ 
+creates
+ 
+a new object/instance of a given class. Let’s take an example of a ‘Student’ class and create a new object/instance of type ‘Student’.
+Example:
+ 
+Using
+ 
+‘new’
+ 
+keyword
+Creating
+ 
+a
+ 
+new
+ 
+instance
+ 
+(object)
+ 
+of
+ 
+the
+ 
+‘Student’
+ 
+class.
+Student
+ 
+st1
+ 
+=
+ 
+new
+ 
+Student();
+ 
+In
+ 
+this
+ 
+example, we
+ 
+did
+ 
+three
+ 
+things:
+Created
+ 
+a
+ 
+variable
+ 
+‘st1’
+ 
+of type
+ 
+‘Student’ using
+ 
+the
+ 
+step: Student 
+st1
+Created
+ 
+an
+ 
+instance
+ 
+or
+ 
+object of
+ 
+type
+ 
+‘Student’ using
+ 
+the step:
+ 
+new
+ 
+Student()
+Finally,
+ 
+we
+ 
+assigned this
+ 
+Student
+ 
+object
+ 
+to the
+ 
+st1 
+variable
+=== ppt/slides/slide14.xml ===
+Declare a class and create an object in a single statement
+Syntax:
+ 
+new
+ 
+Keyword
+&lt;Class
+ 
+name&gt;
+ 
+&lt;Variable name&gt;
+ 
+=
+ 
+new
+ 
+&lt;Class
+ name&gt;();
+=== ppt/slides/slide15.xml ===
+Declare a class and create an object in two statements
+Remember – ‘A new object is created in RAM only when you execute the “new” keyword.’ The diagram below shows that objects/instances are created in memory like primitive variables.
+!
+=== ppt/slides/slide16.xml ===
+Object instances created in RAM
+=== ppt/slides/slide17.xml ===
+STORING VALUES IN JAVA OBJECTS
+To
+ 
+store
+ 
+values
+ 
+in
+ 
+an
+ 
+object’s
+ 
+attribute,
+ 
+you
+ 
+first
+ 
+need
+ 
+to
+ 
+be
+ 
+able
+ 
+to
+ 
+access
+ 
+the
+ 
+attribute.
+ 
+In
+ 
+Java, there
+ 
+is
+ 
+something
+ 
+called
+ 
+a
+ 
+‘
+dot
+ 
+operator
+’.
+ 
+A
+ 
+‘dot
+ 
+operator’
+ 
+lets
+ 
+you
+ 
+access
+ 
+the
+ 
+attributes
+ 
+of
+ 
+an object. Let us look at the syntax
+ 
+to access an object’s attribute, and then we will look at some 
+examples.
+ 
+Syntax:
+ 
+To
+ 
+access
+ 
+an
+ 
+object’s
+ attribute
+&lt;object
+ 
+name&gt;
+ 
+.
+ 
+&lt;attribute
+ 
+name&gt;
+Syntax:
+ 
+To
+ 
+assign
+ 
+a
+ 
+value
+ 
+to
+ 
+an
+ 
+object’s
+ 
+attribute
+&lt;object
+ 
+name&gt;
+ 
+.
+ 
+&lt;attribute
+ 
+name&gt;
+ 
+=
+ 
+&lt;any 
+value&gt;
+=== ppt/slides/slide18.xml ===
+To access an object’s attribute
+package
+ 
+classesAndObjects
+;
+public
+ 
+class
+ Student {
+int
+ 
+studentId
+; 
+String 
+studentName
+; 
+int
+ 
+studentAge
+;
+int
+ 
+studentGrade
+; 
+String 
+studentAddress
+;
+	
+public
+ 
+static
+ 
+void
+ main(String[] 
+args
+) { 
+Student 
+st1
+;
+st1
+ = 
+new
+ Student();
+System.
+out
+.println
+(
+&quot;Student id = &quot;
+ + 
+st1
+.
+studentId
+); 
+System.
+out
+.println
+(
+&quot;Student Name = &quot;
+ + 
+st1
+.
+studentName
+); 
+System.
+out
+.println
+(
+&quot;Student Age = &quot;
+ + 
+st1
+.
+studentAge
+); 
+System.
+out
+.println
+(
+&quot;Student Grade = &quot;
+ + 
+st1
+.
+studentGrade
+); 
+System.
+out
+.println
+(
+&quot;Student Address = &quot;
+ + 
+st1
+.
+studentAddress
+);
+}
+}
+=== ppt/slides/slide19.xml ===
+To assign a value to an object’s attribute
+package
+ 
+classesAndObjects
+;
+public
+ 
+class
+ 
+Student
+ 
+{
+int 
+studentId
+; 
+String
+ 
+studentName
+; 
+int 
+studentAge
+;
+int 
+studentGrade
+; 
+String
+ 
+studentAddress
+;
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{
+Student
+ 
+st1
+;
+st1
+ 
+=
+ 
+new
+ 
+Student();
+st1
+.
+studentId 
+= 1; 
+st1
+.
+studentName
+ 
+=
+ 
+&quot;Sam&quot;
+;
+st1
+.
+studentAge 
+= 14;
+st1
+.
+studentGrade 
+= 8; 
+st1
+.
+studentAddress
+ 
+=
+ 
+&quot;100
+ 
+New
+ 
+Street&quot;
+;
+System.
+out
+.println
+(
+&quot;Student id = &quot; 
++ 
+st1
+.
+studentId
+); 
+System.
+out
+.println
+(
+&quot;Student Name = &quot; 
++ 
+st1
+.
+studentName
+); 
+System.
+out
+.println
+(
+&quot;Student Age = &quot; 
++ 
+st1
+.
+studentAge
+); 
+System.
+out
+.println
+(
+&quot;Student Grade = &quot; 
++ 
+st1
+.
+studentGrade
+); 
+System.
+out
+.println
+(
+&quot;Student
+ 
+Address
+ 
+=
+ 
+&quot;
+ 
++
+ 
+st1
+.
+studentAddress
+);
+}
+}
+=== ppt/slides/slide20.xml ===
+JAVA CLASS METHODS
+methods/functions are blocks of code that can be called from your program when needed. 
+These methods/functions are added to a Class, and then, when you create an object from that class, those methods/functions become part of that object. These methods then operate on the attributes of that object and change its state. We will look at the examples and syntax for the same.
+package
+ 
+classesAndObjects
+;
+public class 
+Bike { 
+String 
+bikeMake
+; 
+String 
+bikeModel
+; 
+int
+ 
+manufactureyear
+; 
+String 
+bikeColor
+;
+}
+Bike
+ 
+Class without 
+Methods
+=== ppt/slides/slide21.xml ===
+Bike Class with Methods – 
+setBikeMake
+ &amp; 
+getBikeMake
+package
+ 
+classesAndObjects
+; 
+public
+ 
+class
+ 
+Bike
+ 
+{ 
+String 
+bikeMake
+;
+String 
+bikeModel
+;
+int
+ 
+manufactureyear
+; 
+String 
+bikeColor
+;
+ 
+public
+ 
+void
+ 
+setBikeMake
+(String
+ 
+bikeMakeValue
+)
+ 
+{ 
+bikeMake
+ 
+= 
+bikeMakeValue
+;
+}
+ 
+public
+ 
+String
+ 
+getBikeMake
+()
+ 
+{
+return
+ 
+bikeMake
+;
+}
+ 
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{ 
+Bike 
+bk1 
+= 
+new 
+Bike();
+String
+ 
+bkName
+=
+&quot;&quot;
+;
+//The
+ 
+below line of code calls
+ 
+the
+ 
+setBikeMake
+ method and passes
+ 
+the
+ 
+Bike name as a parameter. This will set the Bike name in object bk1. 
+bk1
+.setBikeMake(
+&quot;XYZ Bike&quot;
+);
+ 
+//The line of code below calls the 
+getBikeMake
+ method to get the bike name from the object bk1 and assign it to the variable 
+bkName
+.
+bkName
+=
+ 
+bk1
+.getBikeMake();
+System.
+out
+.println
+(
+&quot;Bike
+ 
+name
+ 
+from
+ 
+object
+ 
+bk1
+ 
+=
+ 
+&quot; 
++
+ 
+bkName
+);
+}
+}
+=== ppt/slides/slide22.xml ===
+Program Execution Flow
+We
+ 
+created
+ 
+a
+ 
+class
+ 
+named
+ 
+‘Bike’
+We
+ 
+added
+ 
+four
+ 
+member
+ 
+variables
+ 
+(attributes)
+ 
+to
+ 
+this
+ 
+class:
+ 
+bikeMake
+,
+ 
+bikeModel
+, 
+manufactureyear
+, and 
+bikeColor
+.
+We
+ 
+also
+ 
+added
+ 
+two
+ 
+member
+ 
+methods
+ 
+–
+ 
+setBikeMake
+,
+ 
+getBikeMake
+Then,
+ 
+we
+ 
+created
+ 
+a
+ 
+main()
+ 
+method—public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+).
+ 
+The
+ 
+main() method is where a program's execution begins.
+In
+ 
+main()
+ 
+method, we created a
+ 
+variable ‘bk1’ of
+ 
+type
+ 
+‘Bike’.
+We
+ 
+created an
+ 
+object of
+ 
+type
+ 
+Bike using
+ 
+‘new’:
+ 
+new
+ 
+Bike().
+This
+ 
+bike
+ 
+object
+ 
+is
+ 
+assigned
+ 
+to a
+ 
+variable
+ 
+bk1:
+  
+bk1
+ 
+=
+ 
+new
+ 
+Bike().
+We
+ 
+created a
+ 
+variable 
+bkName
+ 
+of
+ 
+string 
+type.
+Using
+ 
+the
+ 
+object
+ 
+bk1,
+ 
+we
+ 
+called
+ 
+its
+ 
+member
+ 
+method
+ 
+setBikeMake
+ 
+and
+ 
+passed
+ 
+‘XYZ
+ 
+Bike’ 
+as
+ 
+a
+ 
+parameter to
+ 
+this
+ 
+method.
+The
+ 
+setBikeMake
+()
+ 
+method
+ 
+accepted
+ 
+the
+ 
+parameter
+ 
+value
+ 
+and
+ 
+assigned
+ 
+this
+ 
+value
+ 
+to
+ 
+the 
+bk1
+ 
+object’s
+ 
+member
+ 
+variable
+ 
+bikeMake
+.
+Then,
+ 
+we called
+ 
+the
+ 
+getBikeMake
+() method,
+ 
+which
+ 
+returned
+ 
+the
+ 
+value
+ 
+of
+ 
+the 
+bikeMake
+ variable from the bk1 object.
+This
+ 
+returned
+ 
+value
+ 
+was
+ 
+assigned
+ 
+to
+ 
+the
+ 
+variable
+ 
+bkName
+ 
+and
+ 
+later
+ 
+printed
+ 
+using 
+System.out.println
+() method.

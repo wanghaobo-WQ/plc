@@ -1,0 +1,202 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 5
+Numeral  Systems
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+Numeral Systems
+Numeral systems are systems in mathematics that are used to express numbers in various forms and are understood by computers. A number is a mathematical value used for counting and measuring objects, and for performing arithmetic calculations. 
+=== ppt/slides/slide3.xml ===
+Binary Numeral System (base 2)
+Decimal number
+Binary number
+1
+1
+2
+10
+3
+11
+4
+100
+5
+101
+6
+110
+7
+111
+8
+1000
+9
+1001
+10
+1010
+=== ppt/slides/slide4.xml ===
+Octal Numeral System (base 8)
+Octal number
+Binary number
+1
+1
+2
+10
+3
+11
+4
+100
+5
+101
+6
+110
+7
+111
+=== ppt/slides/slide5.xml ===
+Hexadecimal Numeral System (base 16)
+Hexadecimal number
+Decimal number
+Binary number
+1
+1
+1
+2
+2
+10
+3
+3
+11
+4
+4
+100
+5
+5
+101
+6
+6
+110
+7
+7
+111
+8
+8
+1000
+9
+9
+1001
+A
+10
+1010
+B
+11
+1011
+C
+12
+1100
+D
+13
+1101
+E
+14
+1110
+F
+15
+1111
+=== ppt/slides/slide6.xml ===
+Ternary Numeral systems (base 3)
+ 
+Decimal number
+Binary number
+Ternary number
+1
+1
+1
+2
+10
+2
+3
+11
+10
+4
+100
+11
+5
+101
+12
+6
+110
+20
+7
+111
+21
+8
+1000
+22
+9
+1001
+100
+=== ppt/slides/slide7.xml ===
+Quaternary
+ 
+numeral system (base 4)
+Quaternary is the base base-4 numeral system. It uses the digits 0, 1, 2 and 3 to represent any real number.
+Decimal number
+Binary number
+Quaternary number
+1
+1
+2
+10
+3
+11
+4
+100
+5
+101
+6
+110
+7
+111
+8
+1000
+9
+1001
+=== ppt/slides/slide8.xml ===
+Home work
+Make Quinary Numeral system Chart use number 5 as a base of the system
+Decimal number
+Binary number
+Quinary number
+1
+1
+2
+10
+3
+11
+4
+100
+5
+101
+6
+110
+7
+111
+8
+1000
+9
+1001
+=== ppt/slides/slide9.xml ===
+Writing any number as a polynomial
+=== ppt/slides/slide10.xml ===
+Home work
+Write next numbers as a polynomial
+FF1
+16
+765
+8
+101101
+2
+3321
+4
+7153
+10

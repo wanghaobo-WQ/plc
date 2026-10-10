@@ -1,0 +1,1115 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 
+7
+Java Variables and operators
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+JAVA VARIABLES
+Primitive variables
+Reference variables
+A variable, regardless of any programming language, is like a container. A container that holds something in it. In Java, there are two types of variables:
+=== ppt/slides/slide3.xml ===
+Example
+To check if a given number is Prime or not.
+Any
+ 
+whole
+ 
+number
+ 
+(non-decimal
+ 
+number)
+ 
+that
+ 
+is greater
+ 
+than
+ 
+1
+ 
+and can
+ 
+ONLY
+ 
+be
+ 
+divided
+ 
+by 1 and itself, with remainder = 0, is a Prime number. 
+If you can divide a number by any other number and get a zero remainder, then it is not a Prime number. To rephrase this, any whole number greater than 1 and its factors are ONLY 1 and itself, then that number is a prime 
+number
+Prime
+ 
+Numbers
+Non-Prime
+ 
+numbers
+2, 3, 5, 7, 11, 
+13
+4,9,21,27
+=== ppt/slides/slide4.xml ===
+Let us write steps to determine whether a given number is Prime
+#
+Description
+Steps
+Result
+1
+We need a variable to hold a given number
+ 
+(user
+ 
+input).
+ 
+So,
+ 
+let
+ 
+us
+ 
+use
+ 
+x
+and
+ 
+assign
+ 
+zero
+ 
+to
+ 
+it.
+Let
+ 
+x
+ 
+=
+ 
+0
+The
+ 
+value
+ 
+of
+ 
+x
+ 
+is 
+zero.
+2
+Let us use another variable, ‘
+isPrime
+.’ We will use this as an indicator to check whether the number
+ 
+is
+ 
+prime
+ 
+or
+ 
+not.
+ 
+Don’t
+worry;
+ 
+you
+ 
+will
+ 
+see
+ 
+it
+ 
+as
+ 
+we
+ 
+use
+ 
+it.
+isPrime
+ 
+=
+ 
+1
+The
+	
+value
+	
+of 
+isPrime is one.
+3
+Now, we ask the user to provide a number
+ 
+to
+ 
+check
+ 
+if
+ 
+it
+ 
+is
+ 
+prime
+ 
+or
+ 
+not. Understand that any number the user
+ 
+types
+ 
+on
+ 
+their
+ 
+keyboard
+ 
+will
+now
+ 
+be
+ 
+assigned
+ 
+to
+ 
+variable
+ 
+x.
+Input
+ 
+x
+The
+ 
+user
+ 
+will enter a number
+4
+Now
+ 
+we
+ 
+need
+ 
+to
+ 
+check
+ 
+if
+ 
+x
+ 
+is
+ 
+&lt;
+ 
+0,
+ 
+or if x is = 0 or 1
+If
+ 
+x
+ 
+&lt;0 
+Then
+isPrime=0 
+jump
+ 
+to
+ 
+step#9
+Else
+ 
+if
+ 
+x
+ 
+=
+ 
+0
+ 
+or
+ 
+x
+ 
+=
+ 
+1 
+Then
+ 
+isPrime=0
+ 
+jump to step#9
+Check if x&lt;0, x=0 or x = 1. In all these cases, we know it is not prime.
+=== ppt/slides/slide5.xml ===
+5
+We
+ 
+check
+ 
+if
+ 
+x
+ 
+=
+ 
+2
+ 
+because
+ 
+2
+ 
+is
+ 
+a prime number.
+If
+ 
+x
+ 
+=
+ 
+2 
+Then
+isPrime = 1 jump
+ 
+to
+ 
+step#
+ 
+9
+If
+ 
+x=2,
+ 
+we
+ 
+know it is prime.
+6
+Now,
+ 
+if
+ 
+the
+ 
+control
+ 
+has
+ 
+come
+ 
+to
+ 
+this
+step,
+ 
+this
+ 
+means
+ 
+x
+ 
+must
+ 
+be
+ 
+greater
+than
+ 
+2.
+ 
+We
+ 
+use
+ 
+another
+ 
+variable
+ 
+as
+ 
+a
+divisor
+ 
+of
+ 
+x (x
+ 
+divided
+ 
+by
+ 
+y).
+y
+ 
+=
+ 
+2
+y
+ 
+has
+ 
+value
+ 
+2.
+7
+We
+ 
+divide
+ 
+x
+ 
+/
+ 
+y
+ 
+to
+ 
+check
+ 
+if
+ 
+there
+ 
+is any remainder. We will use the word ‘Remainder’ here to show that we are checking the remainder of this division.
+If
+ 
+x
+ 
+Remainder
+ 
+y
+ 
+=
+ 
+0 
+Then
+isPrime
+ 
+=
+ 0.
+And
+ 
+jump
+ 
+to
+ 
+step#
+ 
+9
+Else
+Increase
+ 
+y
+ 
+by
+ 
+1
+Divide
+ 
+x
+ 
+/
+ 
+y
+ 
+and check
+ 
+if
+ 
+there
+ 
+is any
+ 
+remainder.
+=== ppt/slides/slide6.xml ===
+8
+Check
+ 
+if
+ 
+the
+ 
+value
+ 
+of
+ 
+y
+ 
+is
+ 
+the
+ 
+same as
+ 
+that
+ 
+of
+ 
+x.
+ 
+If
+ 
+yes,
+ 
+then
+ 
+you
+ 
+do
+ 
+not want
+ 
+to
+ 
+continue
+ 
+with
+ 
+the
+ 
+division because we are only checking if x can be divided with numbers other
+ 
+than
+ 
+1
+ 
+and
+ 
+itself.
+ 
+So,
+ 
+if
+ 
+x
+ 
+=
+ 
+y, we will stop the repetition; if not, we
+ 
+repeat
+ 
+the
+ 
+division
+ 
+by
+ 
+y
+ 
+to
+check
+ 
+if
+ 
+there
+ 
+is
+ 
+any
+ 
+remainder.
+If
+ 
+x
+ 
+=
+ 
+y
+Then
+ 
+jump
+ 
+to
+ 
+step#9 
+Else
+Jump
+ 
+to
+ 
+step
+ 
+#
+ 
+7
+If
+   
+y
+   
+has
+reached the value
+ 
+of
+ 
+x,
+ 
+stop repetition; if not,
+ 
+repeat
+ 
+step 
+#7.
+9
+Now check the value of our ‘isPrime’ variable. If the value = 1, then
+ 
+the
+ 
+number
+ 
+is
+ 
+prime;
+ 
+if
+ 
+not,
+ 
+the number is not prime.
+If
+ 
+isPrime
+ 
+=
+ 
+1
+Print
+ 
+“Number
+ 
+is
+ 
+prime”
+Else
+Print
+ 
+“Number
+ 
+is
+ 
+not 
+prime”
+ 
+10
+End
+ 
+ 
+=== ppt/slides/slide7.xml ===
+Illustration of RAM usage by applications and variables
+=== ppt/slides/slide8.xml ===
+PRIMITIVE VARIABLES
+Primitive variable types, in Java, are used to store numbers and Boolean values. 
+Each variable type has its reserved keyword, which indicates what type of variable it is. 
+=== ppt/slides/slide9.xml ===
+Category
+Primitive 
+Types
+Primitive Variables
+(Keywords)
+Values
+ 
+they
+ 
+can
+ 
+store (Min
+ 
+and
+ 
+Max
+ 
+values)
+Memory 
+Used
+Numbers
+ 
+Integer
+byte
+-128
+ 
+to
+ 
+127
+1 
+byte
+short
+-32768
+ 
+to
+ 
+32767
+2 
+bytes
+int
+-2147483648
+ 
+to
+ 
+2147483647
+4 
+bytes
+long
+-9223372036854775808
+	
+to
+9223372036854775807
+8 
+bytes
+char
+0
+ 
+to 
+65535
+2 
+bytes
+Floating
+point
+float
+1.4E-45
+ 
+to
+ 
+3.4028235E38
+4 
+bytes
+double
+4.9E-
+324
+ 
+to
+ 
+1.7976931348623157E308
+8 
+bytes
+Boolean
+Boolean
+boolean
+True,
+ 
+False
+1 
+bit
+Primitive variables and their min – max values
+DO NOT use capital letters in variable type
+=== ppt/slides/slide10.xml ===
+Boolean variables 
+Boolean variables can store only one of two values, 
+True
+ or 
+False
+, at any given time. 
+=== ppt/slides/slide11.xml ===
+How to declare variables 
+Syntax:
+ 
+Declare
+ 
+a
+ 
+variable
+ 
+and
+ 
+assign
+ 
+a
+ 
+value 
+Declare: 
+&lt;primitive type&gt; &lt;variable name&gt;; 
+OR
+Declare
+ 
+and
+ 
+assign
+ 
+value:
+ 
+&lt;primitive
+ 
+type&gt;
+ 
+&lt;variable
+ 
+name&gt;
+ 
+=
+ &lt;value&gt;;
+Note: 
+Anything given within &lt;&gt; is a placeholder. 
+You will need to replace it with actual 
+values.
+=== ppt/slides/slide12.xml ===
+Note
+When you assign a value to a
+ 
+variable for
+ 
+the 
+FIRST
+ 
+time
+, it is known
+ 
+as ‘
+Initialization,
+’ and when you first 
+create a variable of any type
+, it is known as ‘
+Declaration
+.’ So, the above syntax can be categorized as ‘Declaration’ and ‘Declaration + Initialization’ of a 
+variable.
+=== ppt/slides/slide13.xml ===
+Example 1: ‘Declaration’ and ‘Declaration + Initialization’ of a variable
+byte age;
+age = 10;
+ OR
+byte age = 10;
+int salary; 
+salary = 40000; 
+OR
+int salary = 40000;
+short distance; 
+distance = 2700; 
+OR
+short distance = 2700;
+=== ppt/slides/slide14.xml ===
+Important notice 
+Can we use the variable type ‘byte’ to store a salary of 40000?
+Can we use the variable type ‘long’ to store an age of 10?
+=== ppt/slides/slide15.xml ===
+Floating Point Variables
+Floating point variables are ‘float’ and ‘double.’ These are also Primitive variables. The floating-point variables (float and double) are used when you want to store numbers with decimal points. For example, if I wanted to store a value, say, 35.05 or 101.234, I would use either ‘float’ or ‘double’ type variables. Look at the examples given below:
+Example
+ 
+2:
+ 
+float
+ 
+and double 
+variables
+float v1 = 65.5f; 
+double v2 = 101.123;
+Note:
+ 
+When
+ 
+you
+ 
+assign
+ 
+a
+ 
+value
+ 
+to
+ 
+a
+ 
+‘float’
+ 
+variable,
+ 
+you
+ 
+need
+ 
+to
+ 
+type
+ 
+the
+ 
+letter
+ 
+‘f’
+ 
+at
+ 
+the 
+end
+ 
+of
+ 
+the value. Ex. 65.5f, 
+23.2f
+=== ppt/slides/slide16.xml ===
+package 
+variablesAndOperators
+;
+public class 
+primitiveVariableTest
+ {
+	public static void 
+main(String[] 
+args
+) {
+byte
+ 
+v1
+=127;
+short
+ 
+v2
+ = 32767;
+int
+ 
+v3
+ = 2147483647;
+long
+ 
+v4
+ = 9223372036854775807L;
+char
+ 
+v5
+= 32;
+float
+ 
+v6
+ = 1234567.1f; 
+double
+ 
+v7
+ = 1234567.12345; 
+boolean
+ 
+v8
+ = 
+true
+;
+// Print values of all variables
+System.
+out
+.println
+(
+" Value of V1 = "
+ + 
+v1
+);
+System.
+out
+.println
+(
+" Value of V2 = "
+ + 
+v2
+);
+System.
+out
+.println
+(
+" Value of V3 = "
+ + 
+v3
+);
+System.
+out
+.println
+(
+" Value of V4 = "
+ + 
+v4
+);
+System.
+out
+.println
+(
+" Value of V5 = "
+ + 
+v5
+);
+System.
+out
+.println
+(
+" Value of V6 = "
+ + 
+v6
+);
+System.
+out
+.println
+(
+" Value of V7 = "
+ + 
+v7
+);
+System.
+out
+.println
+(
+" Value of V8 = "
+ + 
+v8
+);
+}
+}
+Discuss the results with your teacher
+=== ppt/slides/slide17.xml ===
+Quick
+ 
+Note:
+Look
+ 
+at
+ 
+the
+ 
+sample
+ 
+program
+ 
+and
+ 
+take
+ 
+note
+ 
+of
+ 
+below
+ 
+items:
+-Every statement in the program ends with a semicolon (;). In Java, a semicolon denotes the end of
+ 
+a
+ 
+statement.
+ 
+If
+ 
+you
+ 
+miss
+ 
+the
+ 
+semicolon
+ 
+at
+ 
+the
+ 
+end
+ 
+of
+ 
+the
+ 
+statement,
+ 
+you
+ 
+will
+ 
+get
+ 
+a
+ 
+compile-time 
+error.
+ 
+-Observe
+ 
+the
+ 
+lines
+ 
+starting
+ 
+with
+ 
+//.
+ 
+In
+ 
+Java,
+ 
+if
+ 
+you
+ 
+want
+ 
+to
+ 
+enter
+ 
+any
+ 
+comments
+ 
+or messages
+ 
+for
+ 
+the programmer to read, then use one of these two comment markers -	
+// comments
+ 
+OR	
+/* 
+comments
+ 
+*/. 
+Java will not execute anything typed in the comment section.
+ 
+-The
+ 
+command
+ 
+System.out.println
+ 
+prints
+ 
+the
+ 
+message
+ 
+and
+ 
+value
+ 
+of the
+ 
+variable
+ 
+on
+ 
+the
+ 
+screen.
+ 
+In our example, we printed messages such as “Value of variable V1 =” followed by + v1. So, anything you give within double quotes “ ” will be printed as
+ 
+a message, and any variable you give
+ 
+outside
+ 
+of
+ 
+double
+ 
+quotes
+ 
+will
+ 
+be
+ 
+replaced with its
+ 
+value
+ 
+and printed on the screen.
+ 
+The
+ 
+‘+’ sign will combine the message and variable value.

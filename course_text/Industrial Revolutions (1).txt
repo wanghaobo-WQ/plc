@@ -1,0 +1,246 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 1
+Introduction to the industrial revolution
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+2
+Our course will be based on an important term - this is the fourth industrial revolution
+If there is industrial revolution 4, what are 1,2 and 3?
+Introducing 
+=== ppt/slides/slide3.xml ===
+3
+1
+st
+1780
+Mechanization, 
+Energy use of water, Energy 
+use of steam
+The First Industrial Revolution: The Age of Mechanical Production
+=== ppt/slides/slide4.xml ===
+4
+The First Industrial Revolution: The Age of Mechanical Production
+James Watt
+Scottish inventor, mechanical engineer, and chemist
+Steam engine 
+Stirling
+ engine 
+=== ppt/slides/slide5.xml ===
+5
+The First Industrial Revolution: The Age of Mechanical Production
+=== ppt/slides/slide6.xml ===
+6
+2
+nd
+1870
+Mass Production,
+Assembly line,
+Electricity
+The Second Industrial Revolution: The Age of Science and Mass Production
+=== ppt/slides/slide7.xml ===
+7
+The Second Industrial Revolution: The Age of Science and Mass Production
+Thomas Alva Edison
+Nikola
+ 
+Tesla
+Ernest Rutherford
+Marie
+ 
+Curie
+Alexander Fleming
+Dmitriy
+ 
+Mendeleev
+Albert Einstein
+Ivan
+ 
+Pavlov
+=== ppt/slides/slide8.xml ===
+8
+The Second Industrial Revolution: The Age of Science and Mass Production
+=== ppt/slides/slide9.xml ===
+9
+Big problem of the First and Second Industrial Revolutions 
+Even children worked in factories, putting in 14-hour shifts alongside adults. Such conditions endured into the 20th century.
+=== ppt/slides/slide10.xml ===
+10
+3
+rd
+1950
+Computerization and
+Automation
+production
+The Third Industrial Revolution: The Digital Revolution
+=== ppt/slides/slide11.xml ===
+The Third Industrial Revolution: The Digital Revolution
+The Jacquard machine (
+1804
+) 
+Part of a difference engine  first created by Charles Babbage 
+ 
+(
+1822
+)
+=== ppt/slides/slide12.xml ===
+12
+The Third Industrial Revolution: The Digital Revolution
+Intel Core i7
+~
+3
+.
+2
+ billion 
+transistors!
+(surface area 
+355,5 mm^2)
+Moore's law is the observation that the number of transistors in a dense integrated circuit (IC) doubles about every two years. 
+=== ppt/slides/slide13.xml ===
+13
+The Third Industrial Revolution: The Digital Revolution
+=== ppt/slides/slide14.xml ===
+14
+The Third Industrial Revolution: The Digital Revolution
+1948 — 1958, 
+first
+ 
+generation
+ 
+of computer
+1959 — 1967, 
+second
+ 
+generation
+ 
+of computer
+1968 — 1973, 
+third
+ 
+generation
+ 
+of computer
+1974 — 1982, 
+fourth
+ 
+generation
+ 
+of computer
+1982 – today, fifth
+ 
+generation
+ 
+of computer
+=== ppt/slides/slide15.xml ===
+15
+The Third Industrial Revolution: The Digital Revolution
+1948 — 1958, 
+first
+ 
+generation
+ 
+of computer
+Vacuum tube technology
+Unreliable
+Supported machine language only
+Very costly
+Generated a lot of heat
+Slow input and output devices
+Huge size
+Need of AC
+Non-portable
+Consumed a lot of electricity
+Use of transistors
+Reliable in comparison to first generation computers
+Smaller size as compared to first generation computers
+Generated less heat as compared to first generation computers
+Consumed less electricity as compared to first generation computers
+Faster than first generation computers
+Still very costly
+AC required
+Supported machine and assembly languages
+1959 — 1967, 
+second
+ 
+generation
+ 
+of computer
+=== ppt/slides/slide16.xml ===
+16
+The Third Industrial Revolution: The Digital Revolution
+1968 — 1973, 
+third
+ 
+generation
+ 
+of computer
+IC used
+More reliable in comparison to previous two generations
+Smaller size
+Generated less heat
+Faster
+Lesser maintenance
+Costly
+AC required
+Consumed lesser electricity
+Supported high-level language
+VLSI technology used
+Very cheap
+Portable and reliable
+Use of PCs
+Very small size
+Pipeline processing
+No AC required
+Concept of internet was introduced
+Great developments in the fields of networks
+Computers became easily available
+1974 — 1982, fourth generation of computer
+=== ppt/slides/slide17.xml ===
+17
+The Third Industrial Revolution: The Digital Revolution
+1982 – today, fifth
+ 
+generation
+ 
+of computer
+?
+ — 
+?
+, sixth generation of computer
+Development of true artificial intelligence
+Development of Natural language processing
+Advancement in Parallel Processing
+Advancement in Superconductor technology
+More user-friendly interfaces with multimedia features
+Availability of very powerful and compact computers at cheaper rates
+=== ppt/slides/slide18.xml ===
+18
+The Third Industrial Revolution: The Digital Revolution
+1957: First municipal computer (Norwich, UK)
+~ 9 million dollars for modern money
+10.71-0.918 
+ms
+ (93-1089 Hz)
+1280 bytes
+3-6 tons
+2015: The Raspberry Pi Zero
+~1
+5
+$
+1 ns (1 GHz clock)
+512 MB
+9 g
+Elliot running 24 hours a day for 10 years = Raspberry Pi Zero computing in 5 minutes!
+=== ppt/slides/slide19.xml ===
+19
+The Third Industrial Revolution: The Digital Revolution
+=== ppt/slides/slide20.xml ===
+20
+The Third Industrial Revolution: The Digital Revolution
+Amazon Go
+Crypto money
+Exoskeleton
+Unmanned vehicles

@@ -1,0 +1,261 @@
+﻿=== ppt/slides/slide1.xml ===
+Java Basic Programming : Exercises, Practice, Solution
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+1
+=== ppt/slides/slide2.xml ===
+1. Hello and Name Printer
+2
+Write a Java program to print 'Hello' on screen and your name on a separate line.
+Expected Output :
+Hello
+Akram Al Khuri
+=== ppt/slides/slide3.xml ===
+1. Hello and Name Printer
+3
+public
+ 
+class
+ 
+Exercise1
+ 
+{
+ 
+public
+ 
+static
+ 
+void
+ 
+main
+(
+String
+[]
+ 
+args
+)
+ 
+{
+ 
+/
+/ Print a greeting message to the console
+ 
+System
+.
+out
+.
+println
+(
+"Hello\
+nAkram
+ Al Khuri!"
+);
+ 
+}
+ 
+}
+=== ppt/slides/slide4.xml ===
+2. Allow the program to read input from the user
+4
+import
+ 
+java
+.
+util
+.
+Scanner
+;
+public
+ 
+class
+ 
+Main
+ 
+{
+ 
+public
+ 
+static
+ 
+void
+ 
+main
+(
+String
+[]
+ 
+args
+)
+ 
+{
+ 
+// Create a Scanner object to read input from the console
+ 
+Scanner
+ input 
+=
+ 
+new
+ 
+Scanner
+(
+System
+.
+in
+);
+ 
+// Prompt the user to input their first name
+ 
+System
+.
+out
+.
+print
+(
+"Input your first name: "
+);
+ 
+String
+ 
+fname
+ 
+=
+ 
+input
+.
+next
+();
+ 
+// Prompt the user to input their last name
+ 
+System
+.
+out
+.
+print
+(
+"Input your last name: "
+);
+ 
+String
+ 
+lname
+ 
+=
+ 
+input
+.
+next
+();
+ 
+// Output a greeting message with the user's full name
+ 
+System
+.
+out
+.
+println
+();
+ 
+System
+.
+out
+.
+println
+(
+"Hello \n"
+ 
++
+ 
+fname
+ 
++
+ 
+" "
+ 
++
+ 
+lname
+);
+ 
+}
+ 
+}
+=== ppt/slides/slide5.xml ===
+2. Allow the program to read input from the user
+5
+What is the output of the previous program? 
+Discuss the results
+=== ppt/slides/slide6.xml ===
+1. Sum of Two Numbers
+6
+Write a Java program to print the sum of two numbers.
+Test Data:
+74 + 36
+Expected Output
+ :
+110
+=== ppt/slides/slide7.xml ===
+2. Sum of Two Numbers
+7
+public
+ 
+class
+ 
+Exercise2
+ 
+{
+ 
+public
+ 
+static
+ 
+void
+ 
+main
+(
+String
+[]
+ 
+args
+)
+ 
+{
+ 
+// Calculate the sum of 24 and 26
+ 
+int
+ sum 
+=
+ 
+24
+ 
++
+ 
+26
+;
+ 
+// Print the result of the addition
+ 
+System
+.
+out
+.
+println
+(
+sum
+);
+ 
+}
+ 
+}
+ 
+=== ppt/slides/slide8.xml ===
+Do it your self
+8
+Write Java code takes two numbers as input from the user, calculates their sum, and then displays the result. 
+It uses the Scanner class to read user input and performs basic arithmetic.

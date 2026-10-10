@@ -1,0 +1,236 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 10+11
+Fundamentals of Logic
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+2
+The Binary Concept 
+The PLC, like all digital equipment, operates on the binary principle
+1 and 0
+ON or OFF
+open or closed
+true or false
+high or low
+=== ppt/slides/slide3.xml ===
+3
+Logic gate is a circuit
+Logic is the ability to make decisions when one or more different factors must be taken into account before an action is taken. 
+This is the basis for the operation of the PLC, where it is required for a device to operate when
+ 
+certain conditions have been met.
+=== ppt/slides/slide4.xml ===
+4
+The AND Function
+The AND gate output is  1  only  if all inputs are 1
+The basic rules that apply to  an AND	 gate are:
+If all inputs are 1, the output will be 1.
+If any input is 0, the output will be 0.
+=== ppt/slides/slide5.xml ===
+5
+AND logic gate operates similarly to control devices connected in series
+=== ppt/slides/slide6.xml ===
+6
+The OR Function
+The OR gate output is 1 if one or more inputs are 1
+The basic rules that apply to an OR gate are:
+• If one or more inputs are 1, the output is 1.
+• If all inputs are 0, the output will be 0.
+=== ppt/slides/slide7.xml ===
+7
+OR logic gate operates similarly to control devices connected in parallel
+=== ppt/slides/slide8.xml ===
+8
+The NOT Function
+NOT function can have only one input
+The NOT output is 1 if the input is 0. The output is 0 if the input is 1. 
+=== ppt/slides/slide9.xml ===
+9
+NOT function constructed using a normally closed pushbutton
+=== ppt/slides/slide10.xml ===
+10
+NOT function is most often used in conjunction with an AND gate
+The NOT function is most often used in conjunction with the AND or the OR gate. 
+NOT function connected to one input of an AND gate for a low-pressure indicator circuit. If the power is on (1) and the pressure switch is not closed (0), the warning light will be on (1).
+=== ppt/slides/slide11.xml ===
+11
+NAND gate
+The NOT symbol placed at the output of an AND gate would invert the normal output result. 
+An AND gate with an inverted output is called a NAND gate. 
+The NAND function is often used in integrated circuit logic arrays and can be used in programmable controllers to solve complex logic.
+=== ppt/slides/slide12.xml ===
+12
+NAND gate
+The NOT symbol placed at the output of an OR gate would invert the normal output result.
+An OR gate with an inverted output is called a NOR gate. 
+The NAND function is often used in integrated circuit logic arrays and can be used in programmable controllers to solve complex logic.
+=== ppt/slides/slide13.xml ===
+13
+The Exclusive-OR (XOR) Function
+An often-used combination of gates is the exclusive-OR (XOR) function.
+The output of this circuit is HIGH only when one input or the other is HIGH, but not both. The exclusive-OR gate is commonly used for the comparison of two binary numbers.
+=== ppt/slides/slide14.xml ===
+14
+Boolean Algebra
+The mathematical study of the binary number system  and logic is called Boolean algebra. The purpose of this algebra is to provide a simple way of writing complicated combinations of logic statements. There are many applications where Boolean algebra could be applied to solving PLC programming problems
+=== ppt/slides/slide15.xml ===
+15
+Boolean Algebra laws
+COMMUTATIVE LAW
+A + B = B + A
+A 
+⋅
+ B = B 
+⋅
+ A
+ASSOCIATIVE LAW
+(
+A 
++ 
+B
+) 
++ 
+C 
+= 
+A 
++ 
+(
+B 
++ 
+C 
+)
+(
+A 
+⋅ 
+B
+) 
+⋅ 
+C 
+= 
+A 
+⋅ 
+(
+B 
+⋅ 
+C 
+)
+DISTRIBUTIVE LAW
+A 
+⋅ 
+(
+B 
++ 
+C
+) 
+= 
+(
+A 
+⋅ 
+B
+) 
++ 
+(
+A 
+⋅ 
+C 
+)
+A 
++ 
+(
+B 
+⋅ 
+C
+) 
+= 
+(
+A 
++ 
+B
+) 
+⋅ 
+(
+A 
++ 
+C 
+)
+This law holds true only in Boolean algebra.
+=== ppt/slides/slide16.xml ===
+16
+basic logic operators are used in combination to form Boolean equations
+=== ppt/slides/slide17.xml ===
+17
+Developing Logic Gate Circuits from Boolean Expressions
+Y = AB + C
+=== ppt/slides/slide18.xml ===
+18
+Developing Logic Gate Circuits from Boolean Expressions
+Y = AB + C
+=== ppt/slides/slide19.xml ===
+19
+Developing Logic Gate Circuits from Boolean Expressions
+Y = A(BC + D)
+=== ppt/slides/slide20.xml ===
+20
+Developing Logic Gate Circuits from Boolean Expressions
+Y = A(BC + D)
+=== ppt/slides/slide21.xml ===
+21
+Developing Logic Gate Circuits from Boolean Expressions
+Y = A(BC + D)
+Boolean expression: 
+Y = A(BC + D) Gates required: (by inspection)
+1 -  AND gate with inputs B and C
+1 -  OR gate with inputs BC and D
+1 - AND gate with input A and the output from the OR gate
+=== ppt/slides/slide22.xml ===
+22
+Producing the Boolean Equation for a Given Logic Gate Circuit
+=== ppt/slides/slide23.xml ===
+23
+Producing the Boolean Equation for a Given Logic Gate Circuit
+Y = C
+ (A +B)
+ 
+=== ppt/slides/slide24.xml ===
+24
+Producing the Boolean Equation for a Given Logic Gate Circuit
+Y = 
+B + A
+ 
+• The output of AND gate 1 is 
+B
+• The output of AND gate 2 is A
+ 
+=== ppt/slides/slide25.xml ===
+25
+Hardwired Logic versus Programmed Logic
+Motor stop/start control station with pilot lights
+Hardwired logic is fixed; it is changeable only by altering the way devices are electrically interconnected. In contrast, programmable control is based on the basic logic functions, which are programmable and easily changed. 
+=== ppt/slides/slide26.xml ===
+26
+Examples for logic expressions for PLC
+Because the PLC uses ladder logic diagrams, the conversion from any existing relay logic to programmed logic is simplified. Each rung is a combination of input conditions (symbols) connected from left to right, with the symbol that represents the output at the far right. The symbols that represent the inputs are connected in series, parallel, or some combination of the two to obtain the desired logic. The following group of examples illustrates the relationship between the relay ladder schematic, the ladder logic program, and the equivalent logic gate circuit.
+Two limit switches connected in series and used to control a solenoid valve
+=== ppt/slides/slide27.xml ===
+27
+Examples for logic expressions for PLC
+Two limit switches connected in parallel and used to control a solenoid valve
+Two limit switches connected in parallel with each other and in series with a pressure switch
+=== ppt/slides/slide28.xml ===
+28
+Examples for logic expressions for PLC
+Two limit switches connected in series with each other and in parallel with a third limit switch, and used to control a warning horn
+Two limit switches connected in series with each other and in parallel with two other limit switches (that are connected in series with each other), and used to control a pilot light
+=== ppt/slides/slide29.xml ===
+29
+Examples for logic expressions for PLC
+One limit switch connected in series with a normally closed pushbutton and used to control a solenoid valve. This circuit is programmed so that the output solenoid will be turned on when the limit switch is closed and the pushbutton is not pushed
+Exclusive-OR circuit. The output lamp of this circuit is ON only when pushbutton A or B is pressed, but not both
+=== ppt/slides/slide30.xml ===
+30
+Examples for logic expressions for PLC
+A motor control circuit with two start/stop buttons. When either start button is depressed, the motor runs. By use of a seal-in contact, it continues to run when the start button is released. Either stop button stops the motor when it is depressed

@@ -1,0 +1,685 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 
+1
+2
+Working with multidimensional arrays in Java
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+Working with Arrays in Java
+A multidimensional Array has more than one Row and Column. Its structure is similar to the diagrams given below.
+=== ppt/slides/slide3.xml ===
+2-DIMENSIONAL ARRAYS (OR 2D ARRAYS)
+A 2-dimensional array, as the name suggests, has two dimensions - Rows and Columns
+If I want to access the values 100, 200, and 300 from this array, then I will need to use both the index positions like this - Two_D_array1 [Row] [Colum]:
+Two_D_array1
+ 
+[1]
+ 
+[2]
+Two_D_array1
+ 
+[3]
+ 
+[1]
+Two_D_array1
+ 
+[4]
+ 
+[5]
+=== ppt/slides/slide4.xml ===
+DECLARATION AND INITIALIZATION OF ARRAY SYNTAX
+2-
+ 
+dimensional array is similar to that of a single-dimensional array.
+Declare
+ 
+an
+ 
+Array
+ 
+variable
+Declare
+ 
+and Initialize
+ 
+an Array
+ 
+variable
+Syntax:
+ 
+Declaration
+ 
+of
+ 
+a
+ 
+2-Dimensional
+ 
+Array
+ 
+Syntax
+ 
+1:
+ 
+Declaration of
+ 
+a 2-Dimensional
+ 
+Array
+ 
+in
+ 
+two 
+steps
+&lt;data
+ 
+type&gt;
+ 
+[ ]
+ 
+[ ]
+  
+&lt;variable 
+name&gt;;
+&lt;variable
+ 
+name&gt;=
+ 
+new
+ 
+&lt;data
+ 
+type&gt;[number of
+ 
+rows]
+ 
+[number
+ 
+of 
+columns];
+Example:
+ 
+Declaration
+ 
+of
+ 
+a 2-Dimensional
+ 
+Array
+ 
+in
+ 
+two 
+steps
+int
+[][]
+ 
+num1
+;
+num1
+ 
+= 
+new
+ int
+[2][3];
+ 
+String[][]
+ 
+str1
+;
+str1
+ 
+= 
+new
+ 
+String[2][2];
+=== ppt/slides/slide5.xml ===
+DECLARATION AND INITIALIZATION OF ARRAY SYNTAX
+Syntax
+ 
+2:
+ 
+Declaration of
+ 
+a 2-Dimensional
+ 
+Array
+ 
+in
+ 
+single 
+step
+&lt;data
+ 
+type&gt;
+ 
+[
+ 
+]
+ 
+[
+ 
+]
+ 
+&lt;variable
+ 
+name&gt;=
+ 
+new
+ 
+&lt;data
+ 
+type&gt;[number
+ 
+of
+ 
+rows]
+ 
+[number
+ 
+of
+ 
+columns];
+Example:
+ 
+Declaration of
+ 
+a 2-Dimensional
+ 
+Array
+ 
+in a
+ 
+single
+ 
+step
+int
+[][] 
+num2 
+= 
+new int
+[2][3]; 
+String[][]
+ 
+str2
+ 
+=
+ 
+new
+ 
+String[2][2];
+Syntax 3:
+ 
+Declaration
+ 
+and
+ 
+Initialization
+ 
+of
+ 
+a
+ 
+2-Dimensional
+ 
+Array
+In this approach, we can declare an array variable and initialize it (assign values to their elements) in the same step. Look at the syntax and example given below.
+&lt;data
+ 
+type&gt;
+ 
+[
+ 
+]
+ 
+[
+ 
+]
+ 
+&lt;variable
+ 
+name&gt;=
+ 
+{
+ 
+{Row1-comma
+ 
+separated
+ 
+values}
+ 
+{Row2-comma separated values} }
+ 
+Example:
+ 
+Declaration
+ 
+and Initialization
+ 
+of
+ 
+a
+ 
+2-Dimensional 
+Array
+int
+[][]
+ 
+num3
+ 
+=
+ {{1,2,3},{4,5,6}};
+String[][]
+ 
+str3
+ 
+=
+ 
+{{
+"
+Apples"
+,
+"Oranges
+"
+},{
+"
+Banana"
+,
+"Grapes
+"
+}};
+=== ppt/slides/slide6.xml ===
+NOTE
+If you are
+ 
+familiar with Matrices in Mathematics, then you would know
+ 
+that a matrix is often written
+ 
+in
+ 
+the
+ 
+form
+ 
+of
+ 
+r
+ 
+x
+ 
+c,
+ 
+that
+ 
+is,
+ 
+rows
+ 
+x
+ 
+columns.
+ 
+In
+ 
+programming,
+ 
+we
+ 
+use
+ 
+a
+ 
+similar
+ 
+notation to
+ 
+denote
+ 
+the
+ 
+size
+ 
+of
+ 
+an array.
+ 
+So,
+ 
+if I
+ 
+use
+ 
+the
+ 
+matrix
+ 
+notation
+ 
+to describe
+ 
+the
+ 
+size
+ 
+of
+ 
+num3 and str3, I would say num3 is of size 3 x 3, and str3 is of size 2 x 2.
+=== ppt/slides/slide7.xml ===
+Example
+package
+ 
+workingWithArrays
+;
+public
+ 
+class
+ 
+TwoDArrayTest
+  {
+public
+ 
+static
+ 
+void
+ main(String[] 
+args
+) {
+//Array declaration and initialization in different steps
+int
+[][] 
+num1
+;
+num1
+ = 
+new
+ 
+int
+[2][2]; 
+num1
+[0][0] = 10;
+num1
+[0][1] = 110;
+num1
+[1][0] = 20;
+num1
+[1][1] = 220;
+String[][] 
+str1
+ = 
+new
+ String[2][2]; 
+str1
+[0][0] = 
+"R0 - C0"
+;
+str1
+[0][1] = 
+"R0 - C1"
+;
+str1
+[1][0] = 
+"R1 - C0"
+;
+str1
+[1][1] = 
+"R1 - C1"
+;
+System.
+out
+.println
+(
+"First set of nested loops"
+);
+//Nested For loops to iterate through the Rows and Columns of a 2D array
+for
+(
+int
+ 
+i
+=0;
+i
+&lt;2 ; 
+i
+++) {
+for
+(
+int
+ 
+j
+ = 0; 
+j
+&lt;2 ; 
+j
+++
+) {
+System.
+out
+.println
+(
+"Value of num1["
+ + 
+i
+ + 
+"] ["
+ + 
+j
+ + 
+"] = "
+ + 
+num1
+[
+i
+][
+j
+]);
+System.
+out
+.println
+(
+"Value of str1["
+ + 
+i
+ + 
+"] ["
+ + 
+j
+ + 
+"] = "
+ + 
+str1
+[
+i
+][
+j
+]);
+}
+}
+System.
+out
+.println
+(
+"\n"
+); 
+System.
+out
+.println
+(
+"Second set of nested loops"
+);
+//Array declaration and initialization in the same step
+int
+[][] 
+num2
+ = {{1,2},{3,4}};
+String[][] 
+str2
+ = {{
+"
+Apples"
+,
+"Oranges
+"
+},{
+"
+Banana"
+,
+"Grapes
+"
+}};
+//Nested For loops to iterate through the Rows and Columns of a 2D array
+for
+(
+int
+ 
+i
+=0;
+i
+&lt;2 ; 
+i
+++) {
+for
+(
+int
+ 
+j
+ = 0; 
+j
+&lt;2 ; 
+j
+++
+) {
+System.
+out
+.println
+(
+"Value of num2["
+ + 
+i
+ + 
+"] ["
+ + 
+j
+ + 
+"] = "
+ + 
+num2
+[
+i
+][
+j
+]);
+System.
+out
+.println
+(
+"Value of str2["
+ + 
+i
+ + 
+"] ["
+ + 
+j
+ + 
+"] = "
+ + 
+str2
+[
+i
+][
+j
+]);
+}
+}
+}
+}
+=== ppt/slides/slide8.xml ===
+NOTE
+Java
+ 
+arrays
+ 
+are
+ 
+of
+ 
+fixed
+ 
+size. This
+ 
+means
+ 
+that
+ 
+once
+ 
+you
+ 
+define
+ 
+the
+ 
+size
+ 
+of
+ 
+an
+ 
+array,
+ 
+you
+ 
+cannot
+ 
+change
+ 
+the size.
+ 
+So,
+ 
+if
+ 
+you
+ 
+declare
+ 
+a
+ 
+3x3
+ 
+array
+ 
+and
+ 
+later want
+ 
+to
+ 
+store
+ 
+5
+ 
+x
+ 
+5
+ 
+data,
+ 
+then
+ 
+you
+ 
+cannot
+ 
+use
+ 
+the
+ 
+same
+ 
+array. You need to define a new array of size 5 x 5 for that.

@@ -1,0 +1,823 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 
+17
+Modular programming
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology &quot;STANKIN&quot;
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+Modular programming
+Modular
+ 
+programming
+ 
+is
+ 
+a
+ 
+technique
+ 
+to
+ 
+organize
+ 
+large
+ 
+programs
+ 
+into
+ 
+smaller
+ 
+modules.
+ 
+You use these smaller modules whenever and wherever required
+As shown in the 
+next
+ diagram, all the steps to check if a number is prime are coded in a single program (main program). This is known as “
+Monolithic Programming
+”
+ 
+because all the steps are in a single, big program.
+=== ppt/slides/slide3.xml ===
+Representation of Modular programming
+=== ppt/slides/slide4.xml ===
+Modular programming explanation
+Module
+ 
+/
+ 
+Program 
+name
+Task
+ Performed
+Main
+ 
+Program
+The
+ 
+Main
+ 
+program
+ 
+is
+ 
+where
+ 
+the
+ 
+execution
+ 
+begins. It calls Module1 and Module2 to check whether the number is prime, and finally, it prints the 
+result.
+Module
+ 
+1
+This module checks whether the number is valid. It
+ 
+executes
+ 
+all
+ 
+the
+ 
+steps
+ 
+from
+ 
+that
+ 
+module
+ 
+and
+ 
+then responds to the main program as valid or invalid.
+Module
+ 
+2
+This module
+ 
+checks whether
+ 
+the
+ 
+number
+ 
+is prime and
+ 
+then
+ 
+responds
+ 
+to
+ 
+the
+ 
+main
+ 
+program
+ 
+as
+ 
+prime
+or
+ 
+not-
+prime.
+=== ppt/slides/slide5.xml ===
+ADVANTAGES OF MODULAR PROGRAMMING
+windshield wipers
+ 
+are
+ 
+not
+ 
+working
+ 
+properly 
+to change the wipers, the entire car needs to be opened up and the cost is 
+$5000 and three working days to finish
+the tires needs to be replaced
+?
+=== ppt/slides/slide6.xml ===
+ADVANTAGES OF MODULAR PROGRAMMING
+Reduces
+ 
+effort
+ 
+to maintain/update
+ 
+your
+ 
+program
+Makes
+ 
+it less
+ 
+expensive
+ 
+to
+ 
+fix/change
+ 
+your
+ 
+program
+Makes
+ 
+your
+ 
+program
+ 
+more
+ 
+readable and clearer
+ 
+to 
+understand
+=== ppt/slides/slide7.xml ===
+FUNCTIONS (OR METHODS) IN JAVA
+=== ppt/slides/slide8.xml ===
+Examples of Java methods
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+System.
+out
+.println
+(
+&quot;Second
+ 
+nested
+ 
+loops&quot;
+);
+=== ppt/slides/slide9.xml ===
+METHOD DEFINITION AND METHOD CALLING
+In
+ 
+Java,
+ 
+a
+ 
+method
+ 
+needs
+ 
+to
+ 
+be
+ 
+defined
+ 
+(created)
+ 
+first
+ 
+and
+ 
+then
+ 
+called
+ 
+(used).
+ 
+To
+ 
+define
+ 
+(create) a
+ 
+method,
+ 
+you
+ 
+start
+ 
+with
+ 
+method
+ 
+name,
+ 
+followed
+ 
+by
+ 
+parentheses
+ 
+(
+ 
+),
+ 
+followed
+ 
+by
+ 
+method
+ 
+code between curly braces { }.
+The order in which you create your methods does not matter. So, you can call a method first and define it later in your code, and it will work just fine. 
+=== ppt/slides/slide10.xml ===
+Method to Print the sum of two numbers
+package
+ 
+modularProgramming
+;
+	public
+ 
+class
+ 
+methodTest
+ {
+	public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{
+	printSum
+();
+	}
+	public
+ 
+static
+ 
+void
+ 
+printSum()
+ {
+	int
+ 
+x
+ 
+=
+ 
+10; 
+	int
+ 
+y
+ 
+=
+ 
+20; 
+	int 
+z 
+=0;
+	z
+ 
+= 
+x 
++
+ 
+y
+;
+	
+System.
+out
+.println
+(
+&quot;Sum
+ 
+of
+ 
+x
+ 
++
+ 
+y
+ 
+=
+ 
+&quot;
+ 
++
+ 
+z
+);
+	}
+}
+To
+ 
+call
+ 
+a
+ 
+method
+the method printSum() is defined this way
+=== ppt/slides/slide11.xml ===
+JAVA METHODS WITH PARAMETERS
+Like our mathematical function f(x), Java methods can also accept parameters. If you want to pass certain data to your method, then you need to define the method with parameters.
+Earlier, we wrote a method to print the sum of two numbers, and both numbers were defined in the printSum() method. This time, we will pass these numbers as parameters to the printSum() method.
+=== ppt/slides/slide12.xml ===
+Method with parameters - To Print the sum of two numbers
+package
+ 
+modularProgramming
+;
+public
+ 
+class
+ 
+methodTest
+ {
+ 
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{
+printSum
+(10,40);
+}
+public
+ 
+static
+ 
+void
+ 
+printSum(
+int
+ 
+x
+,
+ 
+int
+ 
+y
+)
+ 
+{
+int 
+z 
+=0; 
+z
+ 
+=
+ 
+x
+ 
++
+ 
+y
+;
+System.
+out
+.println
+(
+&quot;Sum
+ 
+of
+ 
+x
+ 
++
+ 
+y
+ 
+=
+ 
+&quot;
+ 
++
+ 
+z
+);
+}
+}
+printSum() accepts two parameters – x and y
+Take care about method printSum() definition
+=== ppt/slides/slide13.xml ===
+JAVA METHODS WITH PARAMETERS AND RETURN VALUES
+We will now look at another feature of Java methods where it returns a value to the calling method.
+ 
+In
+ 
+the
+ 
+earlier
+ 
+example,
+ 
+we
+ 
+called
+ 
+the
+ 
+printSum()
+ 
+method
+ 
+from
+ 
+the
+ 
+main()
+ 
+method,
+ 
+and the printSum() method calculated the total of two numbers and printed the result.
+What if you do not want to print the result using the printSum() method? What if you want your main() method to print the result of that calculation?
+=== ppt/slides/slide14.xml ===
+Method with parameters and return values
+package
+ 
+modularProgramming
+;
+public
+ 
+class
+ 
+methodTest
+ {
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{
+int
+ 
+total
+;
+total
+ 
+=
+ 
+printSum
+(10,40);
+System.
+out
+.println
+(
+&quot;Sum
+ 
+of
+ 
+two
+ 
+numbers
+ 
+=
+ 
+&quot;
+ 
++
+ 
+total
+);
+}
+public
+ 
+static
+ 
+int
+ 
+printSum(
+int
+ 
+x
+,
+ 
+int
+ 
+y
+)
+ 
+{
+int
+ 
+z
+ 
+=
+ 
+0; 
+z
+ 
+=
+ 
+x
+ 
++
+ 
+y
+; 
+return 
+z
+;
+}
+}
+Take care about method printSum() calling
+Take care about method printSum() definition
+=== ppt/slides/slide15.xml ===
+FUNCTIONS (OR METHODS) IN JAVA
+We
+ 
+have
+ 
+learned
+ 
+below concepts
+ 
+about
+ 
+Java
+ 
+methods
+ 
+so
+ 
+far:
+ 
+Declaring
+ 
+a
+ 
+method
+Calling
+ 
+a 
+method
+Declaring
+ 
+and
+ 
+calling
+ 
+methods
+ 
+with
+ parameters
+Using
+ 
+‘Return
+ 
+value’
+ 
+in
+ 
+methods
+=== ppt/slides/slide16.xml ===
+FUNCTIONS (OR METHODS) IN JAVA
+Using these concepts, let us rewrite the Prime number program. We will create a modular structure similar to the one in the ‘Modular Programming’ diagram. We will create three methods in this program:
+main()
+checkIfValid
+()
+checkIfPrime
+()
+=== ppt/slides/slide17.xml ===
+FUNCTIONS (OR METHODS) IN JAVA
+package
+ 
+modularProgramming
+;
+public
+ 
+class
+ 
+primeOrNot
+ {
+public
+ 
+static
+ 
+void
+ main(String[] 
+args
+) {
+		
+int
+ 
+num
+ = 13;
+		
+boolean
+ 
+isValid
+ = 
+false
+, 
+isPrime
+ = 
+false
+; 
+		
+isValid
+ = 
+checkIfValid
+(
+num
+);
+		
+if
+(
+isValid
+ == 
+true
+) { 
+			
+isPrime
+ = 
+checkIfPrime
+(
+num
+);
+			
+if
+(
+isPrime
+ == 
+true
+) 
+				
+System.
+out
+.println
+(
+&quot;Number is prime&quot;
+);
+			
+else
+				
+System.
+out
+.println
+(
+&quot;Number is NOT prime&quot;
+);
+		}
+		
+else
+ {
+			
+System.
+out
+.println
+(
+&quot;Number is not valid. Please try a number &gt; 1.&quot;
+);
+		}
+		} 
+// End of main() method
+ 
+		
+// Method to check if a number is valid or not
+		
+public
+ 
+static
+ 
+boolean
+ 
+checkIfValid
+(
+int
+ 
+number
+) {
+		
+if
+(
+number
+ &gt; 1)
+			
+return
+ 
+true
+;
+		
+else.
+			
+return
+ 
+false
+;
+		}
+		
+// Method to check if a number is Prime or not 
+		
+public
+ 
+static
+ 
+boolean
+ 
+checkIfPrime
+(
+int
+ 
+number
+) { 
+boolean
+ 
+prime
+ = 
+true
+;
+		
+for
+ (
+int
+ 
+i
+ = 2; 
+i
+ &lt;
+number
+; 
+i
+++) {
+			
+if
+(
+number
+ % 
+i
+ == 0) { 
+				
+prime
+ = 
+false
+;
+				
+break
+;
+			}
+		}
+		
+return
+ 
+prime
+;
+	}
+}

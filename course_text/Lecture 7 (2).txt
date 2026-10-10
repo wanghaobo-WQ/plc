@@ -1,0 +1,504 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 7
+Arithmetic operations in the binary system
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+Basic arithmetic operations in the binary numeral system
+Addition
+Subtraction
+Multiplication
+=== ppt/slides/slide3.xml ===
+Addition in binary system
+Let's look at some examples of adding.
+=== ppt/slides/slide4.xml ===
+Subtraction
+ 
+in binary system
+Binary subtraction is just as simple as addition subtraction of one bit from another obey the following four basic rules:
+0 – 0 = 0
+1 – 1 =0
+1 – 0 = 1
+10 – 1 = 1 with a transfer (borrow) of 1
+Examples:
+Perform the following subtraction 101 
+–
+ 111.
+ 
+Solution: 
+Subtract the smaller number from the larger. 
+ Thus 1 0 1 
+–
+ 1 1 1 =
+111
+– 
+101
+=== ppt/slides/slide5.xml ===
+ Multiplication in binary system
+Binary multiplication obeys the four basic rules.
+0 x 0 = 0
+0 x 1 = 0
+1 x 0 = 0
+1 x 1 = 1
+Examples:
+=== ppt/slides/slide6.xml ===
+Division in binary system
+The division operation is performed according to an algorithm similar to the division operation algorithm in the decimal numeral system.
+Example. Consider an example of dividing binary numbers:
+1) 110 ÷ 11
+2) 1100÷11
+3) 1111 ÷ 110 
+=== ppt/slides/slide7.xml ===
+Decimal to Two's Complement Conversion
+In the conversion of a decimal number to 8-bit twos complement. The bit size is always important with twos complement, since you must be able to tell where the sign bit is.
+The steps are simple
+:
+ 
+First, you convert the magnitude of the number to binary
+pad to the word size (8 bits). 
+If the original number was positive, you are done. 
+Otherwise, you must negate the binary number by inverting the bits and adding 1.
+=== ppt/slides/slide8.xml ===
+Examples
+Convert -72 to an 8-bit, twos complement binary number.
+Convert 47 to an 8-bit, twos complement binary number. 
+Convert -109 to an 8-bit, twos complement number.
+This is positive, so all that is needed is to convert to binary and pad to eight bits. 47÷16 = 2 remainder 15, 
+so 47
+10
+ = 2f
+16
+ = 101111
+2
+. 
+So 47 as an 8-bit two's complement number is just 00101111.
+0
+1
+0
+0
+1
+0
+0
+0
+NOT
+1
+0
+1
+1
+0
+1
+1
+1
++
+1
+1
+0
+1
+1
+1
+0
+0
+0
+Convert 72 to binary. 
+72
+10
+ =  1001000
+2
+.
+Pad
+ 
+to
+ 8 
+bits
+: 01001000
+Negate the number by inverting the bits and adding 1.
+So, -72
+10
+ is 10111000 as an eight-bit, two's complement number.
+0
+1
+1
+0
+1
+1
+0
+1
+NOT
+1
+0
+0
+1
+0
+0
+1
+0
++
+1
+1
+0
+0
+1
+0
+0
+1
+1
+109
+10
+ = 1101101
+2
+.
+Pad
+ 
+to
+ 8 
+bits
+:
+ 01101101
+Negate the number by inverting the bits and adding 1.
+So, 109
+10
+ is 10010011 as an eight-bit, two's complement number.
+=== ppt/slides/slide9.xml ===
+Two's Complement to Decimal Conversion
+Now we will study converting an eight-bit two's complement number to decimal. 
+The steps are simple
+:
+ 
+First check if the number is negative or positive by looking at the sign bit. 
+If it is positive, simply convert it to decimal. 
+If it is negative, make it positive by inverting the bits and adding one.
+Then, convert the result to decimal. The negative of this number is the value of the original binary.
+=== ppt/slides/slide10.xml ===
+Examples
+Interpret 11011011 as a two's complement binary number, and give its decimal equivalent.
+1
+1
+0
+1
+1
+0
+1
+1
+¬
+0
+0
+1
+0
+0
+1
+0
+0
++
+1
+0
+0
+1
+0
+0
+1
+0
+1
+First, note that the number is negative, since it starts with a 1.
+Change the sign to get the magnitude of the number.
+Convert the magnitude to decimal: 00100101
+2
+ = 25
+16
+ = 2×16 + 5 = 37
+10
+.
+Since the original number was negative, the final result is -37.
+Interpret 01101001 as a two's complement binary number, and give its decimal equivalent. 
+The number is positive, so simply convert it to decimal:
+ 01101001
+2
+ = 69
+16
+ = 6×16 + 9 = 105
+10
+.
+Interpret 11110010 as a two's complement binary number, and give its decimal equivalent.
+1
+1
+1
+1
+0
+0
+1
+0
+¬
+0
+0
+0
+0
+1
+1
+0
+1
++
+1
+0
+0
+0
+0
+1
+1
+1
+0
+00001110
+2
+ = 
+E
+16
+ = 0×16 + 14 = 14
+10
+. 
+Answer
+: -14.
+=== ppt/slides/slide11.xml ===
+Two's Complement Binary Addition
+In each case, we compute the sum, and note if there was an overflow. If there was a carry out, the extra bit is shown on the next line. (It's falling into the bit bucket, where it will never be heard from again.) keep in mind the rules of detecting overflow:
+The rules for detecting overflow in a two's complement sum are simple:
+If the sum of two positive numbers yields a negative result, the sum has overflowed.
+If the sum of two negative numbers yields a positive result, the sum has overflowed.
+Otherwise, the sum has not overflowed.
+1
+1
+1
+1
+1
+1
+0
+1
+1
+0
+0
+1
++
+0
+1
+0
+1
+1
+1
+0
+0
+0
+0
+1
+1
+0
+1
+0
+1
+-39 + 92 = 53:
+Carryout without overflow. Sum is correct.
+1
+1
+1
+1
+1
+1
+1
+1
+1
+0
+1
+1
+0
+1
++
+1
+1
+1
+1
+1
+0
+0
+1
+1
+1
+1
+0
+0
+1
+1
+0
+-19 + -7 = -26:
+Carryout without overflow. Sum is correct.
+=== ppt/slides/slide12.xml ===
+Additional examples with overflow 
+1
+1
+1
+0
+1
+1
+0
+1
+0
+0
+0
++
+0
+0
+1
+0
+1
+1
+0
+1
+1
+0
+0
+1
+0
+1
+0
+1
+104 + 45 = 149:
+Overflow, no carryout. Sum is not correct.
+1
+1
+1
+1
+1
+1
+1
+0
+0
+1
+1
+0
+0
+1
++
+1
+0
+1
+1
+1
+0
+1
+1
+0
+1
+0
+1
+0
+1
+0
+0
+ -103 + -69 = -172:
+Overflow, with incidental carryout. Sum is not correct.
+1
+1
+1
+1
+1
+1
+1
+0
+1
+1
+1
+1
+1
+1
+1
++
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+0
+0
+0
+0
+0
+0
+127 + 1 = 128:
+Overflow, no carryout. Sum is not correct.
+=== ppt/slides/slide13.xml ===
+Addition in other numeral systems 
+Example Octal numeral system
+Add the numbers
+ 
+672
+8
+ and 
+777
+8
+.
+Solution:
+So, the answer is 
+1671
+8
+ in the octal system. 
+=== ppt/slides/slide14.xml ===
+Home Work
+1110
+2
++1001
+2
+1110
+2
+-1001
+2
+1110
+2
+ x1001
+2
+1010
+2
+ 
+÷
+ 10
+2
+67
+8
++23
+8
+67
+8
+-23
+8
+67
+8
+-23
+8
+74
+8 
+÷ 
+24
+8
+AF
+16
+ + 97
+16
+AF
+16
+-97
+16
+AF
+16
+ - 97
+16
+5
+А
+16 
+÷
+ 1
+Е
+16
+Please solve the next operations: 

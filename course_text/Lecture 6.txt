@@ -1,0 +1,252 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 6
+Converting between numeral  Systems 
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+Converting a binary number into a decimal one
+Example 
+Convert the number 11101000
+2
+ to decimal numeral system.
+=== ppt/slides/slide3.xml ===
+Convert the number 01111010
+2
+ to decimal numeral system.
+=== ppt/slides/slide4.xml ===
+Converting an octal number into a decimal one
+n(power)
+0
+1
+2
+3
+4
+5
+6
+8
+n
+1
+8
+64
+512
+4096
+32768
+262144
+Example 
+Convert the number 75013
+8
+ to decimal numeral system.
+=== ppt/slides/slide5.xml ===
+Convert the number 82015
+8
+ to decimal numeral system
+=== ppt/slides/slide6.xml ===
+Converting a hexadecimal number into a decimal one 
+n(power)
+0
+1
+2
+3
+4
+5
+6
+16
+n
+1
+16
+256
+4096
+65536
+1048576
+16777216
+Example 
+Convert the number FDA1
+16
+ to decimal numeral system.
+=== ppt/slides/slide7.xml ===
+Convert the number AE17F
+16
+ to decimal numeral system
+=== ppt/slides/slide8.xml ===
+Converting a decimal number to the binary system
+To convert a decimal number to the binary system, it must be successively divided by 2 until there is a remainder less than or equal to 1. A number in the binary system is written as a sequence of the last result of division and the remainder of the division in reverse order.
+Example 
+Convert the number 22
+10
+ to binary numeral  system.
+22
+10
+=10110
+2
+=== ppt/slides/slide9.xml ===
+Convert the number 30
+10
+ to binary numeral  system.
+=== ppt/slides/slide10.xml ===
+Converting a decimal number to the octal system
+To convert a decimal number to the octal system, it must be successively divided by 8 until there is a remainder less than or equal to 7. A number in the octal system is written as a sequence of digits of the last result of division and the remainder of the division in reverse order.
+Example 
+Convert the number 571
+10
+ to octal numeral  system.
+571
+10
+=1073
+8
+=== ppt/slides/slide11.xml ===
+Convert the number 751
+10
+ to octal numeral  system
+=== ppt/slides/slide12.xml ===
+Converting a decimal number to the hexadecimal system
+To convert a decimal number to the hexadecimal system, it must be successively divided by 16 until there is a remainder less than or equal to 15. The number in the hexadecimal system is written as a sequence of digits of the last result of division and the remainder of the division in reverse order.
+Example 
+Convert the number 7467
+10
+ to hexadecimal numeral  system.
+7467
+10
+=1D2B
+16
+=== ppt/slides/slide13.xml ===
+Convert the number 589
+10
+ to hexadecimal numeral system.
+=== ppt/slides/slide14.xml ===
+Converting a number from binary to octal numeral system
+To convert a number from binary to octal, it must be divided into triads (triples of digits), starting with the least significant digit, if necessary, supplementing the senior triad with zeros, and replacing each triad with the corresponding octal digit.
+Example 
+Convert the number 1001011
+2
+ to octal numeral  system.
+001 001 011
+2 
+= 113
+8
+=== ppt/slides/slide15.xml ===
+Convert the number 1101111
+2
+ to octal numeral  system
+=== ppt/slides/slide16.xml ===
+Converting a number from the binary system to hexadecimal numeral system
+To convert a number from the binary system to hexadecimal, it must be divided into nibbles (four bits), starting with the least significant digit, if necessary, supplementing the senior nibble with zeros, and replacing each nibble with the corresponding hexadecimal digit.
+Example 
+Convert the number 1011100011
+2
+ to hexadecimal numeral system.
+0010 1110 0011
+2
+ = 2E3
+16
+=== ppt/slides/slide17.xml ===
+Convert the number 1001111111
+2
+ to hexadecimal numeral system
+=== ppt/slides/slide18.xml ===
+Converting an octal number to binary
+To convert an octal number to binary, each digit must be replaced by its equivalent binary triad.
+Example 
+Convert the number 531
+8
+ to binary numeral system.
+531
+8
+ = 101011001
+2
+=== ppt/slides/slide19.xml ===
+Convert the number 724
+8
+ to binary numeral system
+=== ppt/slides/slide20.xml ===
+Converting a hexadecimal number to binary numeral system
+To convert a hexadecimal number to binary, you must replace each digit with its equivalent binary nibble
+Example 
+Convert the number EE8
+16
+ to binary numeral system.
+EE8
+16
+ = 111011101000
+2
+=== ppt/slides/slide21.xml ===
+Convert the number AF5
+16
+ to binary numeral system
+=== ppt/slides/slide22.xml ===
+Converting from octal to hexadecimal numeral system
+When converting from octal to hexadecimal and vice versa, an intermediate conversion of numbers to binary is required.
+Example 
+Convert the number FEA
+16
+ to octal numeral system.
+FEA
+16
+ = 111111101010
+2
+111 111 101 010
+2
+ = 7752
+8
+=== ppt/slides/slide23.xml ===
+Converting from hexadecimal to octal numeral system
+Example 
+Convert the number 6635
+8
+ to hexadecimal numeral system.
+6635
+8
+ = 110110011101
+2
+1101 1001 1101
+2
+ = D9D
+16
+=== ppt/slides/slide24.xml ===
+Representing Data Digitally, example ASCII representation
+Example : writing my name “Akram”
+01000001 01101011 01110010 01100001 01101101
+=== ppt/slides/slide25.xml ===
+Home Work
+CONVERT NUMBERS FROM ONE NUMERAL SYSTEM TO ANOTHER
+1000101
+2 
+-&gt;10
+1001100
+2 
+-&gt;10
+FC422
+16 
+-&gt;10
+251
+10 
+-&gt; 2
+912
+10 
+-&gt; 8
+414
+10 
+-&gt; 16
+1010111
+2 
+-&gt;10
+1211
+4 
+-&gt;10
+3412
+10 
+-&gt; 5
+=== ppt/slides/slide26.xml ===
+Home Work
+ENCODE AND DECODE ASCII
+1- Using Table 3, encode the following words to ASCII binary and hexadecimal, using a byte for each character. Remember that there are different values for uppercase and lowercase letters.
+• Hello
+• 5 cats
+2- Using Table 3, decode the following words. Each character is represented as an 8-bit ASCII value with spaces added for clarity.
+• 01000011 01101111 01100110 01100110 01100101 01100101
+• 01010011 01101000 01101111 01110000
+3- Using Table 3, decode the following word. Each character is represented as an 8-bit hexadecimal value with spaces added for clarity.
+• 43 6C 61 72 69 6E 65 74

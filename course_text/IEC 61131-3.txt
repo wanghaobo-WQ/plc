@@ -1,0 +1,534 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 15+16
+IEC 61131-3 standard and programming languages
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+2
+The standard IEC-61131
+Standard IEC 61131 languages associated with PLC programming
+CoDeSys
+ supports all languages described by the standard IEC-61131:
+Textual Languages:
+Instruction List (IL)
+Structured Text (ST)
+Graphic Languages:
+Sequential Function Chart (SFC)
+Function Block Diagram (FBD)
+Ladder Diagram (LD)
+=== ppt/slides/slide3.xml ===
+3
+Ladder Diagram (LD)
+Ladder diagram language is the most commonly used PLC language and is designed to mimic relay logic
+ 
+The input/output addressing is generally different for each PLC
+ 
+manufacturer
+ 
+=== ppt/slides/slide4.xml ===
+4
+Contacts
+If contact is negated, recognizable by the slash in the contact symbol: |/|. Then the value of the line is transmitted if the variable is FALSE
+=== ppt/slides/slide5.xml ===
+5
+Coils
+/
+Negated coil 
+If a coil is negated, then it connects through only if the appropriate Boolean value is FALSE
+ 
+C
+oil 
+S
+R
+if the Coil (S) was once set at TRUE, then it remains so
+if the Coil (R) was once set at FALSE, then it remains so
+=== ppt/slides/slide6.xml ===
+6
+NAND
+=== ppt/slides/slide7.xml ===
+7
+NOR
+=== ppt/slides/slide8.xml ===
+8
+Exclusive OR (XOR)
+=== ppt/slides/slide9.xml ===
+9
+Latching
+=== ppt/slides/slide10.xml ===
+10
+Multiple outputs
+=== ppt/slides/slide11.xml ===
+11
+Function blocks in the Ladder Diagram
+Along with contacts and coils you can also enter function blocks and programs In the network they must have an input and an output with Boolean values and can be used at the same places as contacts, that is on the left side of the LD network
+Example:
+=== ppt/slides/slide12.xml ===
+12
+Example of Ladder Diagram program
+The circuit shown in next figure is used to control the direction of rotation of a three-phase induction motor. There are three buttons that control the operation: two start buttons -one for clockwise (CW), one for counterclockwise (CCW) and a single stop button.
+Based on these inputs PLC controls the operation of two contactors by activating or deactivating relay coils. The direction of rotation in an induction motor can be reversed by exchanging any two wires of three-phases that are connected to the voltage source. Two contactors must not be on at the same time as this would definitely short circuit the three-phase supply
+=== ppt/slides/slide13.xml ===
+13
+Example of Ladder Diagram program
+=== ppt/slides/slide14.xml ===
+14
+Sequential Function Chart (SFC)
+=== ppt/slides/slide15.xml ===
+15
+Function Block Diagram (FBD)
+The term function block diagram (FBD) is used for PLC programs described in terms of graphical blocks. It is described as being a graphical language for depicting signal and data flows through blocks, these being reusable software elements. A function block is a program instruction unit which, when executed, yields one or more output values. Thus a block is
+represented in the manner shown in next figure with the function name written in the box.
+=== ppt/slides/slide16.xml ===
+16
+Function Block Diagram (FBD)
+=== ppt/slides/slide17.xml ===
+17
+Latching in Function Block Diagram (FBD)
+Ladder (LD) program
+Function Block Diagram (FBD)program
+=== ppt/slides/slide18.xml ===
+18
+LD as FBD
+=== ppt/slides/slide19.xml ===
+19
+Instruction List (IL)
+An instruction list (IL) consists of a series of instructions. Each instruction begins in a new line and contains an operator and, depending on the type of operation, one or more operands separated by commas.
+In front of an instruction there can be an identification 
+mark 
+(label) followed by a colon (:).
+A comment must be the last element in a line. Empty lines can be inserted between instructions.
+LD 
+17
+ 
+ST 
+lint 
+(* comment *)
+GE 
+5
+JMPC 
+next
+LD 
+idword
+EQ 
+istruct.sdword
+STN 
+next
+:
+test
+=== ppt/slides/slide20.xml ===
+20
+Modifiers and operators in IL
+LD 
+N 
+Make current result equal to the operand
+ST 
+N 
+Save current result at the position of the operand
+S 
+ 
+Then put the Boolean operand exactly at TRUE if the current result is TRUE
+R
+ 
+Then put the Boolean operand exactly at FALSE if the current result is TRUE
+AND 
+N,( 
+Bitwise AND
+OR 
+N,( 
+Bitwise OR
+XOR 
+N,( 
+Bitwise exclusive OR
+ADD 
+( 
+Addition
+SUB 
+( 
+Subtraction
+MUL 
+( 
+Multiplication
+DIV 
+( 
+Division
+GT 
+( 
+&gt;
+ 
+GE 
+( 
+&gt;=
+EQ 
+( 
+=
+NE 
+( 
+&lt;&gt;
+ 
+LE 
+( 
+&lt;=
+LT 
+( 
+&lt;
+ 
+JMP 
+CN 
+Jump to the label
+CAL 
+RET 
+) 
+CN 
+CN 
+Call 
+programor
+ function block or
+Leave POU and return to caller.
+Evaluate
+ 
+deferred
+ 
+operation
+Operator
+ 
+Modifiers
+ 
+Meaning
+=== ppt/slides/slide21.xml ===
+21
+Example of an IL program while using some modifiers:
+LD 
+TRUE 
+(*load TRUE in the accumulator*)
+ANDN 
+BOOL1
+(*execute AND with the negated value of the BOOL1 variable*)
+JMPC 
+mark
+(*if the result was TRUE, then jump to the label "mark"*)
+LDN
+BOOL2
+(*save the negated value of *)
+ST 
+ERG 
+(*BOOL2 in ERG*)
+mark
+:
+ 
+ 
+LD
+BOOL2
+(*save the value of *)
+ST 
+ERG 
+*BOOL2 
+in
+ ERG*
+=== ppt/slides/slide22.xml ===
+22
+Using parentheses   
+LD 
+2
+MUL 
+2
+ADD 
+3
+ST 
+ERG
+ERG
+ = ?
+LD 
+2
+MUL 
+(
+2
+ADD 
+3
+)
+ST 
+ERG
+ERG
+ = ?
+=== ppt/slides/slide23.xml ===
+23
+Structured Text (ST)
+The Structured Text consists of a series of instructions which, as determined in high level languages, ("IF..THEN..ELSE") or in loops (WHILE..DO) can be executed.
+Example:
+IF value &lt; 7 THEN
+   WHILE value &lt; 8 DO
+      value:=value+1;
+   END_WHILE;
+END_IF;
+=== ppt/slides/slide24.xml ===
+24
+Expressions
+An 
+expression 
+is a construction which returns a value after its evaluation.
+Expressions are composed of operators and operands. An operand can be a constant, a variable, a function call, or another expression.
+=== ppt/slides/slide25.xml ===
+25
+Operators binding strength
+The evaluation of expression takes place by means of processing the operators according to certain binding rules. The operator with the strongest binding is processed first, then the operator with the next strongest binding, etc., until all operators have been processed.
+Operators with equal binding strength are processed from left to right.
+Below you find a table of the ST operators in the order of their binding strength:
+=== ppt/slides/slide26.xml ===
+26
+Assignment operator
+On the left side of an assignment there is an operand (variable, address) to which is assigned the value of the expression on the right side with the assignment operator :=
+Example:
+Var1 := Var2 * 10;
+After completion of this line Var1 has the tenfold value of Var2.
+=== ppt/slides/slide27.xml ===
+27
+Calling function blocks in ST
+A function block is called in ST by writing the name of the instance of the function block and then assigning the values of the parameters in parentheses. In the following example a timer is called with assignments for the parameters IN and PT. Then the result variable Q is assigned to the variable A.
+The result variable, as in IL, is addressed with the name of the function block, a following point, and the name of the variable:
+CMD_TMR(IN := %IX5, PT := 300);
+A:=CMD_TMR.Q
+=== ppt/slides/slide28.xml ===
+28
+RETURN instruction
+The RETURN instruction can be used to leave a POU, for example depending on a condition
+=== ppt/slides/slide29.xml ===
+29
+IF instruction
+With the IF instruction you can check a condition and, depending upon this condition, execute instructions.
+ 
+Syntax:
+IF 
+&lt;Boolean_expression1&gt; 
+THEN
+&lt;
+IF_instructions
+&gt;
+{ELSIF 
+&lt;Boolean_expression2&gt; 
+THEN
+&lt;ELSIF_instructions1&gt;
+. .
+ELSIF 
+&lt;
+Boolean_expression
+ n&gt; 
+THEN
+&lt;
+ELSIF_instructions
+ n-1&gt;
+ELSE
+&lt;
+ELSE_instructions
+&gt;
+}
+END_IF;
+=== ppt/slides/slide30.xml ===
+30
+IF instruction
+Example:
+ 
+IF temp&lt;17
+THEN 
+heating_on
+ := TRUE;
+ELSE 
+heating_on
+ := FALSE;
+END_IF;
+Here the heating is turned on when the temperature sinks below 17 degrees. Otherwise it remains off.
+=== ppt/slides/slide31.xml ===
+31
+IF instruction
+Example:
+ 
+IF temp&lt;17
+THEN 
+heating_on
+ := TRUE;
+ELSE 
+heating_on
+ := FALSE;
+END_IF;
+Here the heating is turned on when the temperature sinks below 17 degrees. Otherwise it remains off.
+=== ppt/slides/slide32.xml ===
+32
+CASE instruction
+With the CASE instructions one can combine several conditioned instructions with the same condition variable in one construct.
+ 
+Syntax:
+CASE 
+&lt;Var1&gt; 
+OF
+&lt;Value1&gt; 
+: 
+&lt;Instruction 1&gt;
+&lt;Value2&gt;
+: 
+&lt;Instruction 2&gt;
+&lt;Value3, Value4, Value5&gt;: &lt;Instruction 3&gt;
+&lt;Value6 .. Value10&gt;: &lt;Instruction 4&gt;
+...
+&lt;Value n&gt;
+: 
+&lt;Instruction n&gt;
+ELSE 
+&lt;ELSE instruction&gt;
+END_CASE;
+=== ppt/slides/slide33.xml ===
+33
+CASE instruction
+Example:
+CASE INT1 OF
+1, 5: BOOL1 := TRUE;
+BOOL3 := FALSE;
+2: BOOL2 := FALSE;
+BOOL3 := TRUE;
+10..20: BOOL1 := TRUE;
+BOOL3:= TRUE;
+ELSE
+BOOL1 := NOT BOOL1;
+BOOL2 := BOOL1 OR BOOL2;
+END_CASE;
+ 
+=== ppt/slides/slide34.xml ===
+34
+FOR loop
+With the FOR loop one can program repeated processes.
+Syntax:
+INT_Var
+ :INT;
+FOR 
+&lt;
+INT_Var
+&gt; := &lt;INIT_VALUE&gt; 
+TO 
+&lt;END_VALUE&gt; 
+{BY 
+&lt;Step size&gt;
+} DO
+&lt;Instructions&gt;
+END_FOR;
+ 
+=== ppt/slides/slide35.xml ===
+35
+FOR loop
+Example:
+FOR Counter:=1 TO 5 BY 1 DO
+Var1:=Var1*2;
+END_FOR;
+Erg:=Var1;
+ 
+Note: 
+&lt;END_VALUE&gt; must not be equal to the limit value of the counter &lt;INT_VAR&gt;. For example: If the variable Counter is of type SINT and if &lt;END_VALUE&gt; is 127, you will get an endless loop
+=== ppt/slides/slide36.xml ===
+36
+WHILE loop
+The WHILE loop can be used like the FOR loop with the difference that the break-off condition can be any Boolean expression. This means you indicate a condition which, when it is fulfilled, the loop will be executed.
+ 
+Syntax:
+WHILE 
+&lt;Boolean expression&gt;
+&lt;Instructions&gt;
+END_WHILE;
+Note: 
+The programmer must make sure that no endless loop is caused. He does this by changing the condition in the instruction part of the loop, for example, by counting up or down one counter.
+=== ppt/slides/slide37.xml ===
+37
+WHILE loop
+Example:
+WHILE counter&lt;&gt;0 DO
+Var1 := Var1*2;
+Counter := Counter-1;
+END_WHILE
+ 
+The WHILE and REPEAT loops are, in a certain sense, more powerful than the FOR loop since one doesn't need to know the number of cycles before executing the loop. In some cases, one will, therefore, only be able to work with these two loop types. If, however, the number of the loop cycles is clear, then a FOR loop is preferable since it allows no endless loops.
+=== ppt/slides/slide38.xml ===
+38
+REPEAT loop
+The REPEAT loop is different from the WHILE loop because the break-off condition is checked only
+after the loop has been executed. This means that the loop will run through at least once, regardless
+of the wording of the break-off condition.
+ 
+Syntax:
+REPEAT
+&lt;Instructions&gt;
+UNTIL 
+&lt;Boolean expression&gt;
+END_REPEAT;
+Note: 
+The programmer must make sure that no endless loop is caused. He does this by changing the condition in the instruction part of the loop, for example by counting up or down one counter.
+=== ppt/slides/slide39.xml ===
+39
+REPEAT loop
+Example:
+REPEAT
+Var1 := Var1*2;
+Counter := Counter-1;
+UNTIL
+Counter=0
+END_REPEAT;
+=== ppt/slides/slide40.xml ===
+40
+EXIT instruction
+If the EXIT instruction appears in a FOR, WHILE, or REPEAT loop, then the innermost loop is ended, regardless of the break-off condition
+=== ppt/slides/slide41.xml ===
+41
+Instructions in ST
+Instruction type 
+Example
+Assignment 
+A:=B; CV := CV + 1; C:=SIN(X);
+Calling a function block
+and
+CMD_TMR(IN := %IX5, PT := 300);
+use of the FB output
+A:=CMD_TMR.Q
+ 
+ 
+RETURN
+RETURN;
+IF
+D:=B*B;
+IF D&lt;0.0 THEN
+C:=A;
+ELSIF D=0.0 THEN
+C:=B;
+ELSE
+C:=D;
+END_IF;
+CASE
+CASE INT1 OF
+1: BOOL1 := TRUE;
+2: BOOL2 := TRUE;
+ELSE
+BOOL1 := FALSE;
+BOOL2 := FALSE;
+END_CASE;
+Instruction type 
+Example
+FOR
+J:=101;
+FOR I:=1 TO 100 BY 2 DO
+IF ARR[I] = 70 THEN
+J:=I;
+EXIT;
+END_IF;
+END_FOR;
+WHILE
+J:=1;
+WHILE J&lt;= 100 AND ARR[J] &lt;&gt; 70 DO
+J:=J+2;
+END_WHILE;
+REPEAT
+J:=-1;
+REPEAT
+J:=J+2;
+UNTIL J= 101 OR ARR[J] = 70
+END_REPEAT
+EXIT
+EXIT;
+Empty instruction
+;

@@ -1,0 +1,215 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 
+14
+Declaring Constants in Java
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+Declaring Constants in Java
+When
+ 
+you
+ 
+start
+ 
+writing
+ 
+complex
+ 
+and
+ 
+lengthy
+ 
+programs,
+ 
+you
+ 
+will
+ 
+use
+ 
+many
+ 
+variables
+ 
+in
+ 
+those programs. During the execution of your program, the value of those variables will keep
+ 
+changing,
+ 
+but
+ 
+you
+ 
+will
+ 
+come
+ 
+across
+ 
+situations
+ 
+where
+ 
+you
+ 
+do
+ 
+not
+ 
+want
+ 
+the
+ 
+values
+ 
+of
+ 
+certain
+ 
+variables 
+to
+ change.
+For example, if you are creating a variable ‘pi’ and assign a value of ‘3.14159’ to it, then you do not want the value of this variable to change because ‘pi’ is a mathematical constant. Its value is always ‘3.14159’ (this number's decimal portion is never-ending).
+Another example can be a variable that stores the total number of months in a year, and its value is always 12.
+=== ppt/slides/slide3.xml ===
+FINAL KEYWORD WITH VARIABLES
+Java provides a ‘
+final
+’ keyword for this. Once you declare a variable as ‘final’ and assign a value to it, Java will prevent your program from changing the values of that variable. Let’s look at the syntax and example to understand this.
+ 
+Syntax:
+ 
+‘final’
+ 
+Keyword
+final
+ 
+&lt;variable
+ 
+type&gt;
+ 
+&lt;variable
+ 
+name&gt;
+ 
+=
+ 
+&lt;value&gt;;
+Example:
+ 
+Using ‘final’
+ 
+Keyword
+package
+ 
+constantsInJava
+;
+public
+ 
+class
+ 
+FinalKeywordTest
+ 
+{
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{
+ 
+final
+ 
+double
+ 
+pi
+ 
+=
+ 
+3.14159;
+final
+ 
+int
+ 
+num_of_months_in_yr
+ 
+=
+ 
+12;
+//Below
+ 
+lines
+ 
+will
+ 
+cause
+ 
+an
+ 
+error 
+pi 
+= 1.1234;
+num_of_months_in_yr
+ 
+=
+ 
+15;
+}
+}
+=== ppt/slides/slide4.xml ===
+FINAL KEYWORD WITH CLASSES
+If
+ 
+a class
+ 
+is declared
+ 
+as
+ 
+‘final’, that
+ 
+class
+ 
+cannot be further
+ 
+inherited by
+ 
+any
+ 
+other
+ 
+class.
+ 
+If 
+you
+ try
+ 
+to extend
+ 
+a
+ 
+‘final’ class,
+ 
+you will get
+ 
+a
+ 
+compilation 
+error.
+=== ppt/slides/slide5.xml ===
+FINAL KEYWORD WITH METHODS
+If a class method is declared ‘final’, it cannot be overridden by its child class.
+I know you have yet to learn about the ‘classes’, but for now, just remember this: The ‘final’ keyword can be used with Variables, Classes, and Methods. You will learn about using the ‘final’ keyword with Java classes and 
+methods later.

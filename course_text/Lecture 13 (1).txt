@@ -1,0 +1,578 @@
+﻿=== ppt/slides/slide1.xml ===
+Lecture 
+1
+3
+String Handling and 
+Manipulationsin
+ Java
+Akram Al 
+Khuri
+Department of Computer-Architecture Control Systems
+Moscow State University of Technology "STANKIN"
+Moscow, Russia
+akramalkhoury@gmail.com
+=== ppt/slides/slide2.xml ===
+String Handling and Manipulations
+We
+ 
+used
+ 
+the
+ 
+‘String’
+ 
+type
+ 
+variables
+ 
+earlier
+ 
+in
+ 
+our
+ 
+programs,
+ 
+and
+ 
+we
+ 
+know
+ 
+that
+ 
+a
+ 
+‘String’
+ variable
+ 
+can
+ 
+store
+ 
+values
+ 
+using
+ 
+any
+ 
+combination
+ 
+of
+ 
+letters,
+ 
+numbers,
+ 
+and
+ 
+symbols
+ 
+(symbols such as %&amp;$#, etc.).
+But, just storing values is not sufficient; you should be able to perform some operations with the strings, such as –
+Checking
+ 
+if
+ 
+two
+ 
+strings
+ 
+are
+ 
+equal
+ 
+or
+ 
+not
+Joining two or
+ 
+more
+ 
+strings
+Extracting
+ 
+a
+ 
+certain number
+ 
+of
+ 
+characters
+ 
+from
+ 
+a
+ 
+given
+ 
+string, 
+etc.
+=== ppt/slides/slide3.xml ===
+EQUALS() FUNCTION
+In the case of ‘String’ variables, to check if the values of two string variables are equal, we 
+CANNOT
+ use the “==” sign; instead, we need to use the equal() function provided by Java
+You
+ 
+cannot
+ 
+use
+ 
+the
+ 
+“==”
+ 
+sign
+ 
+to
+ 
+compare
+ 
+two
+ 
+strings
+ 
+because when
+ 
+you
+ 
+use “==”
+ 
+to
+ 
+compare two
+ 
+strings,
+ 
+instead
+ 
+of
+ 
+comparing
+ 
+the
+ 
+values
+ 
+of
+ 
+the string,
+ 
+Java
+ 
+compares
+ 
+the
+ 
+memory
+ 
+address of
+ 
+those
+ 
+two
+ 
+strings.
+=== ppt/slides/slide4.xml ===
+EQUALS() FUNCTION SYNTAX
+Syntax:
+ 
+equals()
+ 
+function
+&lt;variable1&gt;.equals(&lt;variable2&gt;);
+Example:
+ 
+Using
+ 
+equals()
+ 
+function
+package
+ 
+stringHandling
+;
+public
+ 
+class
+ 
+StringOperationTest
+ 
+{
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{ 		
+String 
+str1
+, 
+str2
+;
+		
+str1
+ = 
+"Apple"
+; 
+		
+str2
+ = 
+"Orange"
+;
+		
+if
+(
+str1
+.equals(
+str2
+))
+			
+System.
+out
+.println
+(
+"str1 and str2 values are equal"
+);
+		
+else
+			
+System.
+out
+.println
+(
+"str1 and str2 values are NOT equal"
+);
+}
+}
+=== ppt/slides/slide5.xml ===
+LENGTH() FUNCTION
+The
+ 
+length()
+ 
+function
+ 
+will
+ 
+give
+ 
+you
+ 
+the
+ 
+length
+ 
+of
+ 
+any
+ 
+string
+ 
+in
+ 
+terms
+ 
+of
+ 
+the
+ 
+number
+ 
+of
+ 
+characters in that string. 
+Example:
+ 
+Using length() function
+package
+ 
+stringHandling
+;
+public
+ 
+class
+ 
+StringOperationTest
+ 
+{
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{
+		String 
+str1
+, 
+str2
+;
+		
+int
+ 
+strlen1
+, 
+strlen2
+;
+ 
+		
+		
+str1
+ = 
+"Apple"
+; 
+		
+str2
+ = 
+"Orange"
+;
+		
+strlen1
+ = 
+str1
+.length(); 
+// Length of str1
+		
+strlen2
+ = 
+str2
+.length(); 
+// Length of str2
+		
+System.
+out
+.println
+(
+"Length of str1 = "
+ + 
+strlen1
+); 
+		
+System.
+out
+.println
+(
+"Length of str2 = "
+ + 
+strlen2
+);
+}
+}
+Syntax:
+ 
+length() 
+function
+&lt;variable&gt;.length()
+=== ppt/slides/slide6.xml ===
+SUBSTRING() FUNCTION
+The substring() function helps extract a specific number of characters from any string. This function has two variations; we will see them both in this section. As always, let’s start with syntax, followed by examples.
+Syntax:
+ 
+substring()
+ 
+function
+&lt;string
+ 
+variable
+ 
+or string
+ 
+constant&gt;.substring(&lt;starting
+ 
+index 
+number&gt;)
+&lt;string variable or string constant&gt;.substring(&lt;starting index number&gt;, &lt;ending index 
+number&gt;)
+package
+ 
+stringHandling
+;
+public
+ 
+class
+ 
+StringOperationTest
+ 
+{
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{ 
+	String 
+str1
+, 
+str2
+;
+	
+str1
+ = 
+"Apple"
+; 
+	
+str2
+ = 
+"Orange"
+;
+	
+System.
+out
+.println
+(
+"Substring of str1 = "
+ + 
+str1
+.substring(3)); 
+	
+System.
+out
+.println
+(
+"Substring of str2 = "
+ + 
+str2
+.substring(2,3));
+	
+System.
+out
+.println
+(
+"Substring of a constant= "
++
+"Apples and 
+Oranges"
+.substring
+(2,5));
+ 
+}
+}
+=== ppt/slides/slide7.xml ===
+NOTE
+The index numbers start from zero
+package
+ 
+stringHandling
+;
+public
+ 
+class
+ 
+StringOperationTest
+ 
+{
+public
+ 
+static
+ 
+void
+ 
+main(String[]
+ 
+args
+)
+ 
+{ 
+	String 
+str1
+, 
+str2
+;
+	
+str1
+ = 
+"Apple"
+; 
+	
+str2
+ = 
+"Orange"
+;
+	
+System.
+out
+.println
+(
+"Substring of str1 = "
+ + 
+str1
+.substring(-3)); 
+	
+System.
+out
+.println
+(
+"Substring of str2 = "
+ + 
+str2
+.substring(2,3));
+	
+System.
+out
+.println
+(
+"Substring of a constant= "
++
+"Apples and 
+Oranges"
+.substring
+(2,5));
+ 
+}
+}
+=== ppt/slides/slide8.xml ===
+Self learning
+Some
+ 
+of
+ 
+the
+ 
+String-related
+ 
+functions
+ 
+that
+ 
+might
+ 
+come
+ 
+in 
+handy:
+trim(),
+ 
+concat
+(),
+ 
+replace(),
+ 
+split(),
+ 
+toLowerCase
+(),
+ 
+toUpperCase
+(),
+ 
+indexOf
+()
